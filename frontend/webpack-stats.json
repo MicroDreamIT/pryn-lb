@@ -1,0 +1,13 @@
+{
+  "status": "done",
+  "publicPath": "/dist/",
+  "chunks": {
+    "main": [
+      {
+        "name": "build.js",
+        "publicPath": "/dist/build.js",
+        "path": "G:\\pythonProject\\hospitalmanage\\frontend\\dist\\build.js"
+      }
+    ]
+  }
+}
