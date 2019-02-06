@@ -3,5 +3,9 @@ from django.http import HttpResponse
 
 
 # Create your views here.
-def index():
-    return HttpResponse("<h1>I am patient </h1>")
+def index(request):
+    return HttpResponse('hello world')
+
+
+def create(request):
+    return render(request, 'patient/create.html')
