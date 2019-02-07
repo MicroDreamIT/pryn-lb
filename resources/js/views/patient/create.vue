@@ -53,10 +53,19 @@
                                 clearable
                         ></v-text-field>
 
+                        <v-text-field
+                                v-model="mobile_number"
+                                mask="####-###########"
+                                required
+                                :counter="25"
+                                clearable
+                                v-validate="'required'"
+                        ></v-text-field>
+
                     </v-card-text>
                     <v-card-actions>
-                        <v-btn @click="submit" color="primary">submit</v-btn>
-                        <v-btn @click="clear" color="error">clear</v-btn>
+                        <v-btn @click="submit()" color="primary">submit</v-btn>
+                        <v-btn @click="clear()" color="error">clear</v-btn>
                     </v-card-actions>
 
                 </v-form>
@@ -67,35 +76,4 @@
 
 </template>
 
-<script>
-    export default {
-        data: () => ({
-            valid: true,
-            name: '',
-            age: 0,
-            care_of: '',
-            gender: 'male'
-        }),
-        methods: {
-            submit() {
-                this.$validator.validateAll().then(value => {
-                    if (value) {
-                        axios.post('ajax/patient', {
-                            name: this.name,
-                            age: this.age,
-                            care_of: this.care_of,
-                            gender: this.gender
-                        }).then(res => {
-                            console.log(res)
-                        }).catch(err => {
-                            console.log(err)
-                        })
-                    }
-                })
-            },
-            clear() {
-                console.log('value')
-            }
-        }
-    }
-</script>
+<script src="./js/create.js"></script>
