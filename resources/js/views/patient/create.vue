@@ -1,47 +1,109 @@
 <template>
-    <div>
-        <h1>Create Patient</h1>
-        <v-form v-model="valid">
-            <v-container>
-                <v-layout>
-                    <v-flex>
-                         <v-text-field
-                            v-model="name"
-                            :rules="nameRules"
-                            :counter="25"
-                            label="name"
-                            required
+
+    <v-layout row pb-2>
+        <v-flex xs8 offset-xs2>
+            <v-card class="card--flex-toolbar">
+                <v-toolbar card prominent color="primary">
+                    <v-toolbar-title class="body-2 white--text">Create Patient</v-toolbar-title>
+
+                </v-toolbar>
+
+                <v-divider></v-divider>
+                <v-form ref="form" v-model="valid" lazy-validation>
+
+                    <v-card-text>
+
+                        <v-text-field
+                                v-model="name"
+                                :counter="25"
+                                label="name"
+                                required
+                                data-vv-name="name"
+                                v-validate="'required|max:25'"
+                                :error-messages="errors.collect('name')"
+                                clearable
                         ></v-text-field>
-                    </v-flex>
-                    <v-flex>
-                         <v-text-field
-                            v-model="age"
-                            :rules="ageRules"
-                            :counter="3"
-                            label="age"
-                            required
+
+                        <v-text-field
+                                v-model="age"
+                                :counter="3"
+                                label="age"
+                                required
+                                mask="###"
+                                data-vv-name="age"
+                                v-validate="'required|between:0.1,150'"
+                                :error-messages="errors.collect('age')"
+                                clearable
                         ></v-text-field>
-                    </v-flex>
-                </v-layout>
-            </v-container>
-        </v-form>
-    </div>
+
+                         <v-select
+                              :items="['male', 'female', 'other']"
+                              label="gender"
+                              v-model="gender"
+                              required
+                              data-vv-name="gender"
+                              v-validate="'required'"
+                        ></v-select>
+
+                        <v-text-field
+                                v-model="care_of"
+                                :counter="25"
+                                label="care of"
+                                clearable
+                        ></v-text-field>
+
+                    </v-card-text>
+                    <v-card-actions>
+                        <v-btn @click="submit" color="primary">submit</v-btn>
+                        <v-btn @click="clear" color="error">clear</v-btn>
+                    </v-card-actions>
+
+                </v-form>
+
+            </v-card>
+        </v-flex>
+    </v-layout>
+
 </template>
 
 <script>
     export default {
-        data:()=>({
-            valid:false,
-            name:'',
-            age:0,
-            ageRules:[
-                v=>!!v||'Age required',
-                v=>v>0 && v.length<4 ||'age must be greater than 0 and less then 999',
-            ],
-            nameRules:[
-                v=>!!v||'Name is required',
-                v=>v.length<=25||'name must be less thn 10 characters'
-            ]
-        })
+        data: () => ({
+            valid: true,
+            name: '',
+            age: 0,
+            care_of: '',
+            gender:'male'
+        }),
+        methods: {
+            submit() {
+                console.log('value')
+            },
+            clear() {
+                console.log('value')
+            }
+        }
     }
 </script>
+
+<!--<v-form v-model="valid">-->
+<!--<v-container>-->
+<!--<v-layout>-->
+<!--<v-flex-->
+<!--xs12-->
+<!--md4-->
+<!--&gt;-->
+
+<!--</v-flex>-->
+<!--<v-flex xs12 md4>-->
+
+<!--</v-flex>-->
+<!--<v-flex xs12 md4>-->
+
+<!--</v-flex>-->
+<!--</v-layout>-->
+<!--<v-layout>-->
+
+<!--</v-layout>-->
+<!--</v-container>-->
+<!--</v-form>-->
