@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix')
 
 /*
  |--------------------------------------------------------------------------
@@ -10,6 +10,9 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+mix.setPublicPath('static/')
+mix.setResourceRoot('../')
 
 mix.js('resources/js/app.js', 'static/js')
-   .sass('resources/sass/app.scss', 'static/css').browserSync({proxy:'localhost:8000'});
+   .sass('resources/sass/app.scss', 'static/css').browserSync({proxy:'127.0.0.1:8000'})
+

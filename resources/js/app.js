@@ -3,9 +3,13 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import Vue from 'vue'
+import Vuetify from 'vuetify'
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+Vue.use(Vuetify, {
+  iconfont: 'mdi'
+})
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
@@ -15,11 +19,13 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
 const app = new Vue({
     el: '#app',
     delimiters: ['{', '}'],
 
     data:{
-        message:'Hi this is testing'
+        message:'Hi this is testing',
+        drawer: null,
     }
 });

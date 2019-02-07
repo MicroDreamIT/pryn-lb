@@ -1,0 +1,25 @@
+<v-app id="inspire">
+    <v-navigation-drawer
+            fixed
+            v-model="drawer"
+            app
+    >
+        {% include 'partial/sidebar.html' %}
+
+    </v-navigation-drawer>
+    <v-toolbar color="indigo" dark fixed app>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+        <v-toolbar-title>Hospital Management</v-toolbar-title>
+    </v-toolbar>
+    <v-content>
+        <v-container fluid fill-height>
+            <v-layout
+            >
+                I am home Page
+            </v-layout>
+        </v-container>
+    </v-content>
+    <v-footer color="indigo" app inset>
+        <span class="white--text">&copy; 2017</span>
+    </v-footer>
+</v-app>
