@@ -36,13 +36,14 @@
                                 clearable
                         ></v-text-field>
 
-                         <v-select
-                              :items="['male', 'female', 'other']"
-                              label="gender"
-                              v-model="gender"
-                              required
-                              data-vv-name="gender"
-                              v-validate="'required'"
+                        <v-select
+                                :items="['male', 'female', 'other']"
+                                label="gender"
+                                v-model="gender"
+                                required
+                                data-vv-name="gender"
+                                v-validate="'required'"
+                                :error-messages="errors.collect('gender')"
                         ></v-select>
 
                         <v-text-field
@@ -73,11 +74,24 @@
             name: '',
             age: 0,
             care_of: '',
-            gender:'male'
+            gender: 'male'
         }),
         methods: {
             submit() {
-                console.log('value')
+                this.$validator.validateAll().then(value => {
+                    if (value) {
+                        axios.post('ajax/patient', {
+                            name: this.name,
+                            age: this.age,
+                            care_of: this.care_of,
+                            gender: this.gender
+                        }).then(res => {
+                            console.log(res)
+                        }).catch(err => {
+                            console.log(err)
+                        })
+                    }
+                })
             },
             clear() {
                 console.log('value')
@@ -85,25 +99,3 @@
         }
     }
 </script>
-
-<!--<v-form v-model="valid">-->
-<!--<v-container>-->
-<!--<v-layout>-->
-<!--<v-flex-->
-<!--xs12-->
-<!--md4-->
-<!--&gt;-->
-
-<!--</v-flex>-->
-<!--<v-flex xs12 md4>-->
-
-<!--</v-flex>-->
-<!--<v-flex xs12 md4>-->
-
-<!--</v-flex>-->
-<!--</v-layout>-->
-<!--<v-layout>-->
-
-<!--</v-layout>-->
-<!--</v-container>-->
-<!--</v-form>-->

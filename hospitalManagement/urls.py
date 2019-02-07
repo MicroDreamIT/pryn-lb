@@ -6,13 +6,6 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ajax/', include('patient.urls')),
     url(r'^.*$', views.index)
 ]
-
-
-# urlpatterns = [
-#     path('patient/', include('patient.urls')),
-#     path('lab/', include('lab.urls')),
-#     path('admin/', admin.site.urls),
-#
-# ]
