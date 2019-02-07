@@ -11,7 +11,7 @@ export default {
             submit() {
                 this.$validator.validateAll().then(value => {
                     if (value) {
-                        axios.post('ajax/patient/create', {
+                        axios.post('/ajax/patient/create', {
                             name: this.name,
                             age: this.age,
                             care_of: this.care_of,
