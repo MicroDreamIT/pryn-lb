@@ -2,25 +2,35 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+Vue.use(Vuetify, {iconfont: 'mdi'})
 
 
-Vue.use(Vuetify, {
-  iconfont: 'mdi'
+import {default as adminRoute} from './routes/route'
+let rout = []
+const routes = rout.concat(
+    adminRoute
+)
+
+const router = new VueRouter({
+    routes,
+    linkActiveClass: 'is-active',
+    mode: 'history',
+    scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 }
+    }
+
 })
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 
 const app = new Vue({
+    router,
     el: '#app',
     delimiters: ['{', '}'],
 

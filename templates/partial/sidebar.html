@@ -4,7 +4,9 @@
             <v-icon>home</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
-            <v-list-tile-title>Home</v-list-tile-title>
+            <v-list-tile-title :to="{name:'dashboard'}">
+                Dashboard
+            </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
     <v-list-tile @click="">
@@ -12,7 +14,9 @@
             <v-icon>contact_mail</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
-            <v-list-tile-title>Contact</v-list-tile-title>
+            <v-list-tile-title>
+                  <router-link :to="{name:'patientCreate'}">Patient</router-link>
+            </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
 </v-list>
