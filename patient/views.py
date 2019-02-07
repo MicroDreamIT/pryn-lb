@@ -4,8 +4,11 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('hello world')
+    return HttpResponse('hello world i am index')
 
 
 def create(request):
+    if request.method == 'POST':
+        return HttpResponse(request.POST['name'])
+
     return render(request, 'patient/create.html')

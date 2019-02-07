@@ -1,3 +1,4 @@
-django==2.1.5
+django
 django-webpack-loader
 pytz
+django-livereload-server
