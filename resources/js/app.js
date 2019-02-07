@@ -3,9 +3,13 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import Vue from 'vue'
+import Vuetify from 'vuetify'
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+Vue.use(Vuetify, {
+  iconfont: 'mdi'
+})
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
@@ -20,6 +24,7 @@ const app = new Vue({
     delimiters: ['{', '}'],
 
     data:{
-        message:'Hi this is testing'
+        message:'Hi this is testing',
+        drawer: null,
     }
 });
