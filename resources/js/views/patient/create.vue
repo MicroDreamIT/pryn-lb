@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>I am patient Create Page</h1>
+        <h1>I am patient Create Page lajksl;dfsd;aklfj</h1>
     </div>
 </template>
 
