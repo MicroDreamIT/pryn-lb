@@ -8,7 +8,7 @@ def index(request):
 
 
 def create(request):
-    if request.method == 'POST':
-        return HttpResponse(request.POST['name'])
 
-    return render(request, 'patient/create.html')
+    if request.method == 'POST':
+        return HttpResponse(request.body)
+
