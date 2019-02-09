@@ -62,6 +62,13 @@
                                 clearable
                                 v-validate="'required'"
                         ></v-text-field>
+                         <v-textarea
+                            name="address"
+                            v-model="address"
+                            label="Address"
+                            hint="Address goes here"
+                          ></v-textarea>
+
 
                     </v-card-text>
                     <v-card-actions>
