@@ -55,7 +55,6 @@
 
                         <v-text-field
                                 v-model="mobile_number"
-                                label="Mobile No."
                                 mask="####-###########"
                                 required
                                 label="Mobile"
@@ -63,6 +62,13 @@
                                 clearable
                                 v-validate="'required'"
                         ></v-text-field>
+                         <v-textarea
+                            name="address"
+                            v-model="address"
+                            label="Address"
+                            hint="Address goes here"
+                          ></v-textarea>
+
 
                     </v-card-text>
                     <v-card-actions>

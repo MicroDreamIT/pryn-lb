@@ -16,6 +16,7 @@ export default {
                             age: this.age,
                             care_of: this.care_of,
                             gender: this.gender,
+                            address: this.address,
                             mobile_number: this.mobile_number
                         }).then(res => {
                             console.log(res)
