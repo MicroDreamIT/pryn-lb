@@ -45862,7 +45862,7 @@ var render = function() {
                 { attrs: { card: "", prominent: "", color: "primary" } },
                 [
                   _c("v-toolbar-title", { staticClass: "body-2 white--text" }, [
-                    _vm._v("Create New Test")
+                    _vm._v("Create New Company")
                   ])
                 ],
                 1
@@ -46101,7 +46101,7 @@ var render = function() {
                 { attrs: { card: "", prominent: "", color: "primary" } },
                 [
                   _c("v-toolbar-title", { staticClass: "body-2 white--text" }, [
-                    _vm._v("Create New Test")
+                    _vm._v("Create New Doctor")
                   ])
                 ],
                 1
@@ -46282,7 +46282,7 @@ var render = function() {
                 { attrs: { card: "", prominent: "", color: "primary" } },
                 [
                   _c("v-toolbar-title", { staticClass: "body-2 white--text" }, [
-                    _vm._v("Create Patient")
+                    _vm._v("Create New Patient")
                   ])
                 ],
                 1
