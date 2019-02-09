@@ -68,8 +68,6 @@
                             label="Address"
                             hint="Address goes here"
                           ></v-textarea>
-
-
                     </v-card-text>
                     <v-card-actions>
                         <v-btn @click="submit()" color="primary">submit</v-btn>
