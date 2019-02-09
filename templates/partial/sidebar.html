@@ -25,9 +25,28 @@
         </v-list-tile-action>
         <v-list-tile-content>
             <v-list-tile-title>
-                  <router-link :to="{name:'diagnosisCreate'}">Diagnosis</router-link>
+                  <router-link :to="{name:'doctorsCreate'}">Doctors</router-link>
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
-</
+    <v-list-tile @click="">
+        <v-list-tile-action>
+            <v-icon>contact_mail</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+            <v-list-tile-title>
+                  <router-link :to="{name:'test-itemCreate'}">Test Item</router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
+    <v-list-tile @click="">
+        <v-list-tile-action>
+            <v-icon>contact_mail</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+            <v-list-tile-title>
+                  <router-link :to="{name:'companyCreate'}">Company</router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
 </v-list>
