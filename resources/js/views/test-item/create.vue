@@ -26,7 +26,7 @@
                  label="Test Unit"
                  required
                  data-vv-name="test_unit"
-                 v-validate="'required|max:10'"
+                 v-validate="'max:10'"
                  :error-messages="errors.collect('test_unit')"
                  clearable
          ></v-text-field>
@@ -35,7 +35,7 @@
                  :counter="30"
                  label="Normal Range"
                  data-vv-name="test_normal_range"
-                 v-validate="'required|max:30'"
+                 v-validate="'max:30'"
                  :error-messages="errors.collect('test_normal_range')"
                  clearable
          ></v-text-field>
