@@ -55,7 +55,6 @@
 
                         <v-text-field
                                 v-model="mobile_number"
-                                label="Mobile No."
                                 mask="####-###########"
                                 required
                                 label="Mobile"

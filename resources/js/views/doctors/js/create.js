@@ -1,18 +1,21 @@
 export default {
     data:()=> ({
         valid:true,
-        test_name:'',
-        test_unit:'',
-        test_normal_range:'',
+        dr_name:'',
+        dr_mobile_no:'',
+        dr_email:'',
+        emailRules: [
+        v => /.+@.+/.test(v) || 'E-mail must be valid'
+      ],
     }),
     methods: {
         submit() {
             this.$validator.validateAll().then(value => {
                 if (value) {
-                    axios.post('/ajax/test-item/create', {
-                        test_name: this.test_name,
-                        test_unit: this.test_unit,
-                        test_normal_range: this.test_normal_range,
+                    axios.post('/ajax/doctors/create', {
+                        dr_name: this.dr_name,
+                        dr_email: this.dr_email,
+                        dr_mobile_no: this.dr_mobile_no,
                     }).then(res => {
                         console.log(res)
                     }).catch(err => {
@@ -20,12 +23,11 @@ export default {
                     })
                 }
             })
-        }
-        ,
+        },
         clear() {
-            this.test_name = ''
-            this.test_unit = ''
-            this.test_normal_range = ''
+            this.dr_name = ''
+            this.dr_email =''
+            this.dr_mobile_no =''
             this.$validator.reset()
         },
     }
