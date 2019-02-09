@@ -2,10 +2,10 @@ export default {
         data: () => ({
             valid: true,
             name: '',
-            age: 0,
+            age: '',
             care_of: '',
-            gender: 'Male',
-            mobile_number:0
+            gender: 'male',
+            mobile_number:''
         }),
         methods: {
             submit() {
