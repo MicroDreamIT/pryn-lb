@@ -16,7 +16,7 @@
                         <v-text-field
                                 v-model="name"
                                 :counter="25"
-                                label="name"
+                                label="Name"
                                 required
                                 data-vv-name="name"
                                 v-validate="'required|max:25'"
@@ -27,7 +27,7 @@
                         <v-text-field
                                 v-model="age"
                                 :counter="3"
-                                label="age"
+                                label="Age"
                                 required
                                 mask="###"
                                 data-vv-name="age"
@@ -37,8 +37,8 @@
                         ></v-text-field>
 
                         <v-select
-                                :items="['male', 'female', 'other']"
-                                label="gender"
+                                :items="['Male', 'Female', 'Other']"
+                                label="Gender"
                                 v-model="gender"
                                 required
                                 data-vv-name="gender"
@@ -49,7 +49,7 @@
                         <v-text-field
                                 v-model="care_of"
                                 :counter="25"
-                                label="care of"
+                                label="Care of"
                                 clearable
                         ></v-text-field>
 
@@ -57,6 +57,7 @@
                                 v-model="mobile_number"
                                 mask="####-###########"
                                 required
+                                label="Mobile"
                                 :counter="25"
                                 clearable
                                 v-validate="'required'"

@@ -4,7 +4,7 @@ export default {
             name: '',
             age: 0,
             care_of: '',
-            gender: 'male',
+            gender: 'Male',
             mobile_number:0
         }),
         methods: {
