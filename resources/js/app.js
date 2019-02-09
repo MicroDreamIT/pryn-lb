@@ -28,6 +28,7 @@ const router = new VueRouter({
 })
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('data-table', require('./components/dataTable').default);
 
 
 const app = new Vue({
