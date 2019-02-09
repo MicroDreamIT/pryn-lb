@@ -4,7 +4,7 @@
         <v-flex xs8 offset-xs2>
             <v-card class="card--flex-toolbar">
                 <v-toolbar card prominent color="primary">
-                    <v-toolbar-title class="body-2 white--text">Create Patient</v-toolbar-title>
+                    <v-toolbar-title class="body-2 white--text">Create New Patient</v-toolbar-title>
 
                 </v-toolbar>
 

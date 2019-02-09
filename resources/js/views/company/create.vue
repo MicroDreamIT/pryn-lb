@@ -3,7 +3,7 @@
         <v-flex xs8 offset-xs2>
             <v-card class="card--flex-toolbar">
                 <v-toolbar card prominent color="primary">
-                    <v-toolbar-title class="body-2 white--text">Create New Test</v-toolbar-title>
+                    <v-toolbar-title class="body-2 white--text">Create New Company</v-toolbar-title>
 
                 </v-toolbar>
 
