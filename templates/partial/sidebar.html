@@ -1,51 +1,103 @@
+
+
 <v-list dense class="own-sidebar">
-    <v-list-tile @click="">
-        <v-list-tile-action>
-            <v-icon>home</v-icon>
-        </v-list-tile-action>
-        <v-list-tile-content>
-            <v-list-tile-title >
-                <router-link :to="{name:'dashboard'}">Dashboard</router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-    </v-list-tile>
-    <v-list-tile @click="">
-        <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
-        </v-list-tile-action>
+
+{#    dashboard#}
+
+       <v-list-tile @click="">
         <v-list-tile-content>
             <v-list-tile-title>
-                  <router-link :to="{name:'patientCreate'}">Patient</router-link>
+                <router-link :to="{name:'dashboard'}">
+                    <i class="mdi mdi-chart-pie"></i>
+                    Dashboard
+                </router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+       </v-list-tile>
+
+      {#    patient  #}
+
+
+ <v-expansion-panel focusable>
+   <v-expansion-panel-content>
+       <div slot="header" >Patient</div>
+        <v-list-tile @click="">
+        <v-list-tile-content>
+            <v-list-tile-title>
+                <router-link :to="{name:'patientCreate'}">
+                    <i class="mdi mdi-chart-pie"></i>
+                    Patient-Creat
+                </router-link>
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
-    <v-list-tile @click="">
-        <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
-        </v-list-tile-action>
+    </v-expansion-panel-content>
+ </v-expansion-panel>
+
+
+    {#    Doctors #}
+
+
+ <v-expansion-panel focusable>
+   <v-expansion-panel-content>
+       <div slot="header" >Doctors</div>
+        <v-list-tile @click="">
         <v-list-tile-content>
             <v-list-tile-title>
                   <router-link :to="{name:'doctorCreate'}">Doctors</router-link>
             </v-list-tile-title>
         </v-list-tile-content>
+
     </v-list-tile>
-    <v-list-tile @click="">
-        <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
-        </v-list-tile-action>
+    </v-expansion-panel-content>
+ </v-expansion-panel>
+
+
+                    {# Test - Items#}
+
+
+     <v-expansion-panel focusable>
+   <v-expansion-panel-content>
+       <div slot="header" >Tests</div>
+        <v-list-tile @click="">
         <v-list-tile-content>
             <v-list-tile-title>
                   <router-link :to="{name:'diagnosisCreate'}">Diagnosis</router-link>
             </v-list-tile-title>
         </v-list-tile-content>
+
     </v-list-tile>
+    </v-expansion-panel-content>
+ </v-expansion-panel>
+
+                    {# Company  #}
+
+
+     <v-expansion-panel focusable>
+   <v-expansion-panel-content>
+       <div slot="header" >Company</div>
+        <v-list-tile @click="">
+        <v-list-tile-content>
+            <v-list-tile-title>
+                 <router-link :to="{name:'companyCreate'}">Company</router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+
+    </v-list-tile>
+    </v-expansion-panel-content>
+ </v-expansion-panel>
+
+
+
+
+
     <v-list-tile @click="">
         <v-list-tile-action>
             <v-icon>contact_mail</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
             <v-list-tile-title>
-                  <router-link :to="{name:'companyCreate'}">Company</router-link>
+                <router-link :to="{name:'patientList'}">Manage patient</router-link>
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
