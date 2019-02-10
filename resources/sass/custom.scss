@@ -3,13 +3,49 @@ body{
 }
 
 .form-style{
-     background: #fff;
-     margin: 25px auto;
-     border: 1px solid #f3f1f1;
-     box-shadow: 0px 3px 20px #4c4c4c1a;
+
+    background: rgba(255, 255, 255, 0.7803921568627451);
+    margin: 25px auto;
+    border: 1px solid rgba(232, 232, 232, 0.9019607843);
+    box-shadow: 0px 3px 20px rgba(76, 76, 76, 0.10196078431372549);
 
      textarea{
-           height: 50px;
+           height: 33px;
      }
+      .v-toolbar__content{
+            padding: 14px !important;
+            height: auto !important;
+      }
 
 }
+    .v-navigation-drawer{
+      background: #222C3C !important;
+    }
+
+    .own-sidebar{
+      .v-expansion-panel{
+        box-shadow: none;
+      }
+        .v-expansion-panel__header{
+          background: #2e3644!important;
+        }
+    }
+
+    .theme--light.v-expansion-panel .v-expansion-panel__container{
+         background: transparent;
+          color: #fff !important;
+          border-bottom: 1px solid rgba(144, 144, 144, 0.30196078431372547)!important;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6)!important;
+    }
+
+    .v-expansion-panel__container.v-expansion-panel__container--active{
+      .v-expansion-panel__header{
+        background: #3d6994 !important;
+      }
+    }
+
+    .v-content__wrap{
+          background-image: linear-gradient(256deg, rgba(58, 136, 115, 0.9) 0%, rgba(76, 157, 222, 0.6) 100%),
+          url(https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg);
+          background-size: cover;
+    }
