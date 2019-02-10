@@ -11,13 +11,13 @@
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                            <v-text-field
-                                                 v-model="dr_name"
+                                                 v-model="name"
                                                  :counter="30"
                                                  label="Doctor Name"
                                                  required
-                                                 data-vv-name="dr_name"
+                                                 data-vv-name="name"
                                                  v-validate="'required|max:30'"
-                                                 :error-messages="errors.collect('dr_name')"
+                                                 :error-messages="errors.collect('name')"
                                                  clearable
                                          ></v-text-field>
                                     </v-card-text>
@@ -25,14 +25,11 @@
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                           <v-text-field
-                                                v-model="dr_mobile_no"
+                                                v-model="mobile"
                                                 mask="####-###########"
-                                                required
-                                                data-vv-name="dr_mobile_no"
                                                 label="Doctor's Mobile No."
                                                 :counter="25"
-                                                v-validate="'required|max:25'"
-                                                :error-messages="errors.collect('dr_mobile_no')"
+                                                :error-messages="errors.collect('mobile')"
                                                 clearable
                                             ></v-text-field>
                                     </v-card-text>
@@ -42,11 +39,11 @@
 
                                     <v-card-text class="px-0">
                                                      <v-text-field
-                                                        v-model="dr_email"
+                                                        v-model="email"
                                                         :rules="emailRules"
-                                                        data-vv-name="dr_email"
+                                                        data-vv-name="email"
                                                         label="Doctor's E-mail"
-                                                        :error-messages="errors.collect('dr_email')"
+                                                        :error-messages="errors.collect('email')"
                                                         clearable
                                                 ></v-text-field>
 

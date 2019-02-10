@@ -11,13 +11,13 @@
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                            <v-text-field
-                                             v-model="test_name"
+                                             v-model="name"
                                              :counter="50"
                                              label="Test Name"
                                              required
-                                             data-vv-name="test_name"
+                                             data-vv-name="name"
                                              v-validate="'required|max:50'"
-                                             :error-messages="errors.collect('test_name')"
+                                             :error-messages="errors.collect('name')"
                                              clearable
                                      ></v-text-field>
                                     </v-card-text>
@@ -25,13 +25,10 @@
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                                      <v-text-field
-                                                     v-model="test_unit"
+                                                     v-model="unit"
                                                      :counter="10"
                                                      label="Test Unit"
-                                                     required
-                                                     data-vv-name="test_unit"
-                                                     v-validate="'required|max:10'"
-                                                     :error-messages="errors.collect('test_unit')"
+                                                     :error-messages="errors.collect('unit')"
                                                      clearable
                                              ></v-text-field>
                                     </v-card-text>
@@ -41,12 +38,10 @@
 
                                     <v-card-text class="px-0">
                                                  <v-text-field
-                                                     v-model="test_normal_range"
+                                                     v-model="range"
                                                      :counter="30"
                                                      label="Normal Range"
-                                                     data-vv-name="test_normal_range"
-                                                     v-validate="'required|max:30'"
-                                                     :error-messages="errors.collect('test_normal_range')"
+                                                     :error-messages="errors.collect('range')"
                                                      clearable
                                              ></v-text-field>
                                     </v-card-text>
@@ -69,8 +64,6 @@
       </v-container>
 
 </template>
-
-
 
 
 <script src="./js/create.js"></script>

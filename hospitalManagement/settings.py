@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webpack_loader',
     'livereload',
-    'doctor',
-    'diagnosis'
+    'doctor.apps.DoctorConfig',
+    'tests.apps.TestsConfig'
 ]
 
 MIDDLEWARE = [

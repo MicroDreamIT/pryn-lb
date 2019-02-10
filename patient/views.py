@@ -15,13 +15,12 @@ def create(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         patient = Patient.objects.create(name=data['name'],
-                               age=data['age'],
-                               gender=data['gender'],
-                               ref_no='R001',
-                               care_of=data['care_of'],
-                               address=data['address']
-                               )
-
+                                         age=data['age'],
+                                         gender=data['gender'],
+                                         ref_no='R001',
+                                         care_of=data['care_of'],
+                                         address=data['address'],
+                                         mobile=data['mobile'])
         # return HttpResponse(Patient.objects.filter(id=patient.id).values())
         return JsonResponse({'type': 'success', 'message': 'Patient Created Successfully'})
 
