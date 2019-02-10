@@ -19,5 +19,6 @@ def create(request):
                                care_of=data['care_of'],
                                address=data['address']
                                )
-        return HttpResponse('Patient Created Successfully')
+        newData = Patient.objects.get(id=1)
+        return HttpResponse(newData)
 

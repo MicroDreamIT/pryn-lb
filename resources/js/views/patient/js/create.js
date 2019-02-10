@@ -5,7 +5,8 @@ export default {
             age: '',
             care_of: '',
             gender: 'male',
-            mobile_number:''
+            mobile_number:'',
+            address: null
         }),
         methods: {
             submit() {
