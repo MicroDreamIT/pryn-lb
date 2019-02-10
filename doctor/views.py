@@ -13,9 +13,9 @@ def create(request):
 
     if request.method == 'POST':
         data = json.loads(request.body)
-        doctor = Doctor.objects.create(dr_name=data['dr_name'],
-                                       dr_email=data['dr_email'],
-                                       dr_mobile=data['dr_mobile'])
+        doctor = Doctor.objects.create(name=data['name'],
+                                       email=data['email'],
+                                       mobile=data['mobile'])
         # return HttpResponse(doctor.objects.filter(id=patient.id).values())
-        return JsonResponse({'type': 'success', 'message': 'Doctor Created Successfully'})
+        return JsonResponse({'type': 'success', 'message': 'New Doctor Created Successfully'})
 

@@ -20,9 +20,9 @@ module.exports = [
         component: require('../views/company/create').default
     },
     {
-        path: '/diagnosis/create',
-        name: 'diagnosisCreate',
-        component: require('../views/diagnosis/create').default
+        path: '/tests/create',
+        name: 'testsCreate',
+        component: require('../views/tests/create').default
     },
 
     {

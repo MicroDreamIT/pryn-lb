@@ -5,7 +5,7 @@ export default {
             age: '',
             care_of: '',
             gender: 'Male',
-            mobile_no:'',
+            mobile:'',
             address: null
         }),
         methods: {
@@ -18,7 +18,7 @@ export default {
                             care_of: this.care_of,
                             gender: this.gender,
                             address: this.address,
-                            mobile_no: this.mobile_no,
+                            mobile: this.mobile,
                         }).then(res => {
                            this.$root.successMessage(res.data),
                             this.name='',
@@ -26,7 +26,7 @@ export default {
                             this.care_of='',
                             this.gender='Male',
                             this.address='',
-                            this.mobile_no=''
+                            this.mobile=''
                         }).catch(err => {
                             console.log(err)
                         })
@@ -38,7 +38,7 @@ export default {
                 this.age=0
                 this.gender=''
                 this.care_of=''
-                this.mobile_no=''
+                this.mobile=''
                 this.$validator.reset()
             }
         }

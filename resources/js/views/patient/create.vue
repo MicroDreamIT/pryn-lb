@@ -48,7 +48,7 @@
                                     </v-card-text>
 
                         <v-text-field
-                                v-model="mobile_no"
+                                v-model="mobile"
                                 mask="####-############"
                                 label="Mobile Number"
                                 :counter="25"
@@ -61,18 +61,16 @@
                             hint="Address goes here"
                             clearable
                           ></v-textarea>
-                    </v-card-text>
+                                </v-flex>
                     <v-card-actions>
                         <v-btn @click="submit()" color="primary">submit</v-btn>
                         <v-btn @click="clear()" color="error">clear</v-btn>
                     </v-card-actions>
 
-                </v-form>
+                  </v-layout>
 
-            </v-card>
-        </v-flex>
-    </v-layout>
-
+          </v-form>
+      </v-container>
 </template>
 
 

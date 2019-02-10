@@ -21,7 +21,7 @@ def create(request):
                                          ref_no='R001',
                                          care_of=data['care_of'],
                                          address=data['address'],
-                                         mobile_no=data['mobile_no'])
+                                         mobile=data['mobile'])
         # return HttpResponse(Patient.objects.filter(id=patient.id).values())
         return JsonResponse({'type': 'success', 'message': 'Patient Created Successfully'})
 
