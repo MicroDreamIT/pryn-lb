@@ -4,7 +4,7 @@
           <v-form ref="form" v-model="valid" lazy-validation>
                   <v-layout row wrap >
                                 <v-flex xs12 md12>
-                                    <v-toolbar card prominent color="deep-purple">
+                                    <v-toolbar card prominent color="primary">
                                      <v-toolbar-title class="body-2 white--text">Create New Patient</v-toolbar-title>
                                 </v-toolbar>
                                 </v-flex>
@@ -86,7 +86,6 @@
                                          <v-btn color="red" @click="clear()" dark>Decline
                                           <v-icon dark right>block</v-icon>
                                         </v-btn>
-
                                     </v-card-actions>
                                 </v-flex>
                      </v-layout>

@@ -1,10 +1,13 @@
 <v-list dense class="own-sidebar">
+
+
+
     <v-list-tile @click="">
         <v-list-tile-action>
             <v-icon>home</v-icon>
         </v-list-tile-action>
         <v-list-tile-content>
-            <v-list-tile-title >
+            <v-list-tile-title>
                 <router-link :to="{name:'dashboard'}">Dashboard</router-link>
             </v-list-tile-title>
         </v-list-tile-content>
@@ -15,7 +18,7 @@
         </v-list-tile-action>
         <v-list-tile-content>
             <v-list-tile-title>
-                  <router-link :to="{name:'patientCreate'}">Patient</router-link>
+                <router-link :to="{name:'patientCreate'}">Patient</router-link>
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
@@ -25,18 +28,7 @@
         </v-list-tile-action>
         <v-list-tile-content>
             <v-list-tile-title>
-                  <router-link :to="{name:'doctorsCreate'}">Doctors</router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-    </v-list-tile>
-
-    <v-list-tile @click="">
-        <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
-        </v-list-tile-action>
-        <v-list-tile-content>
-            <v-list-tile-title>
-                  <router-link :to="{name:'test-itemCreate'}">Test Item</router-link>
+                <router-link :to="{name:'doctorsCreate'}">Doctors</router-link>
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
@@ -47,7 +39,7 @@
         </v-list-tile-action>
         <v-list-tile-content>
             <v-list-tile-title>
-                  <router-link :to="{name:'companyCreate'}">Company</router-link>
+                <router-link :to="{name:'test-itemCreate'}">Test Item</router-link>
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
@@ -58,7 +50,18 @@
         </v-list-tile-action>
         <v-list-tile-content>
             <v-list-tile-title>
-                  <router-link :to="{name:'patientList'}">Manage patient  </router-link>
+                <router-link :to="{name:'companyCreate'}">Company</router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
+
+    <v-list-tile @click="">
+        <v-list-tile-action>
+            <v-icon>contact_mail</v-icon>
+        </v-list-tile-action>
+        <v-list-tile-content>
+            <v-list-tile-title>
+                <router-link :to="{name:'patientList'}">Manage patient</router-link>
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
