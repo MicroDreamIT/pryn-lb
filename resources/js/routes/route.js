@@ -20,15 +20,15 @@ module.exports = [
         component: require('../views/company/create').default
     },
     {
-        path: '/test-item/create',
-        name: 'test-itemCreate',
-        component: require('../views/test-item/create').default
+        path: '/diagnosis/create',
+        name: 'diagnosisCreate',
+        component: require('../views/diagnosis/create').default
     },
 
     {
-        path: '/doctors/create',
-        name: 'doctorsCreate',
-        component: require('../views/doctors/create').default
+        path: '/doctor/create',
+        name: 'doctorCreate',
+        component: require('../views/doctor/create').default
     },
 
 

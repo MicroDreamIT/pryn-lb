@@ -2,7 +2,7 @@ export default {
     data:()=> ({
         valid:true,
         dr_name:'',
-        dr_mobile_no:'',
+        dr_mobile:'',
         dr_email:'',
         emailRules: [
         v => /.+@.+/.test(v) || 'E-mail must be valid'
@@ -12,12 +12,12 @@ export default {
         submit() {
             this.$validator.validateAll().then(value => {
                 if (value) {
-                    axios.post('/ajax/doctors/create', {
+                    axios.post('/ajax/doctor/create', {
                         dr_name: this.dr_name,
                         dr_email: this.dr_email,
-                        dr_mobile_no: this.dr_mobile_no,
+                        dr_mobile: this.dr_mobile,
                     }).then(res => {
-                        console.log(res)
+                        this.$root.successMessage(res.data)
                     }).catch(err => {
                         console.log(err)
                     })
@@ -27,7 +27,7 @@ export default {
         clear() {
             this.dr_name = ''
             this.dr_email =''
-            this.dr_mobile_no =''
+            this.dr_mobile =''
             this.$validator.reset()
         },
     }

@@ -5,7 +5,7 @@ export default {
             age: '',
             care_of: '',
             gender: 'Male',
-            mobile_number:'',
+            mobile_no:'',
             address: null
         }),
         methods: {
@@ -18,18 +18,15 @@ export default {
                             care_of: this.care_of,
                             gender: this.gender,
                             address: this.address,
-                            mobile_number: this.mobile_number
+                            mobile_no: this.mobile_no,
                         }).then(res => {
-                            if(res.data.type == 'success'){
-                                this.$root.successMessage(res.data),
-                                this.name='',
-                                this.age='',
-                                this.care_of='',
-                                this.gender='Male',
-                                this.address='',
-                                this.mobile_number=''
-                            }
-
+                           this.$root.successMessage(res.data),
+                            this.name='',
+                            this.age='',
+                            this.care_of='',
+                            this.gender='Male',
+                            this.address='',
+                            this.mobile_no=''
                         }).catch(err => {
                             console.log(err)
                         })
@@ -41,7 +38,7 @@ export default {
                 this.age=0
                 this.gender=''
                 this.care_of=''
-                this.mobile_number=''
+                this.mobile_no=''
                 this.$validator.reset()
             }
         }
