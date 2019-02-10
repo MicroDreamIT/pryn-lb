@@ -40,10 +40,6 @@
                                 :items="['Male', 'Female', 'Other']"
                                 label="Gender"
                                 v-model="gender"
-                                required
-                                data-vv-name="gender"
-                                v-validate="'required'"
-                                :error-messages="errors.collect('gender')"
                         ></v-select>
 
                         <v-text-field
@@ -54,19 +50,18 @@
                         ></v-text-field>
 
                         <v-text-field
-                                v-model="mobile_number"
-                                mask="####-###########"
-                                required
-                                label="Mobile"
+                                v-model="mobile_no"
+                                mask="####-############"
+                                label="Mobile Number"
                                 :counter="25"
                                 clearable
-                                v-validate="'required'"
                         ></v-text-field>
                          <v-textarea
                             name="address"
                             v-model="address"
                             label="Address"
                             hint="Address goes here"
+                            clearable
                           ></v-textarea>
                     </v-card-text>
                     <v-card-actions>

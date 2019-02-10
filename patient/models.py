@@ -10,6 +10,7 @@ class Patient(models.Model):
     address = models.TextField(max_length=200, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now_add=True)
+    mobile_no = models.CharField(max_length=25, null=True)
 
     def __str__(self):
         return self.name

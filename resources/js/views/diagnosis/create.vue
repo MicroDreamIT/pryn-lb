@@ -31,12 +31,12 @@
                  clearable
          ></v-text-field>
         <v-text-field
-                 v-model="test_normal_range"
+                 v-model="test_range"
                  :counter="30"
                  label="Normal Range"
-                 data-vv-name="test_normal_range"
+                 data-vv-name="test_range"
                  v-validate="'max:30'"
-                 :error-messages="errors.collect('test_normal_range')"
+                 :error-messages="errors.collect('test_range')"
                  clearable
          ></v-text-field>
         <v-card-actions>

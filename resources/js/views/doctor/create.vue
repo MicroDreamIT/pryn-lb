@@ -21,22 +21,17 @@
                  clearable
          ></v-text-field>
             <v-text-field
-                v-model="dr_mobile_no"
+                v-model="dr_mobile"
                 mask="####-###########"
-                required
-                data-vv-name="dr_mobile_no"
                 label="Doctor's Mobile No."
                 :counter="25"
-                v-validate="'required|max:25'"
-                :error-messages="errors.collect('dr_mobile_no')"
                 clearable
             ></v-text-field>
             <v-text-field
                     v-model="dr_email"
                     :rules="emailRules"
-                    data-vv-name="dr_email"
                     label="Doctor's E-mail"
-                    :error-messages="errors.collect('dr_email')"
+                    :counter="40"
                     clearable
             ></v-text-field>
 
