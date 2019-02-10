@@ -27,11 +27,8 @@
                                           <v-text-field
                                                 v-model="dr_mobile_no"
                                                 mask="####-###########"
-                                                required
-                                                data-vv-name="dr_mobile_no"
                                                 label="Doctor's Mobile No."
                                                 :counter="25"
-                                                v-validate="'required|max:25'"
                                                 :error-messages="errors.collect('dr_mobile_no')"
                                                 clearable
                                             ></v-text-field>

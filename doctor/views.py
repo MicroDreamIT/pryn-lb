@@ -17,5 +17,5 @@ def create(request):
                                        dr_email=data['dr_email'],
                                        dr_mobile=data['dr_mobile'])
         # return HttpResponse(doctor.objects.filter(id=patient.id).values())
-        return JsonResponse({'type': 'success', 'message': 'Test Created Successfully'})
+        return JsonResponse({'type': 'success', 'message': 'Doctor Created Successfully'})
 
