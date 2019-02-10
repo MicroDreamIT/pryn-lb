@@ -49,3 +49,7 @@ body{
           url(https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg);
           background-size: cover;
     }
+
+   .theme--light.v-footer{
+      background: $own-primary!important;
+    }
