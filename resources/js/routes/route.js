@@ -10,7 +10,7 @@ module.exports = [
         component: require('../views/patient/create').default
     },
       {
-        path: '/patient/create',
+        path: '/patient',
         name: 'patientList',
         component: require('../views/patient/list').default
     },
@@ -24,9 +24,12 @@ module.exports = [
         name: 'test-itemCreate',
         component: require('../views/test-item/create').default
     },
+
     {
         path: '/doctors/create',
         name: 'doctorsCreate',
         component: require('../views/doctors/create').default
     },
+
+
 ]
