@@ -1,55 +1,123 @@
-body{
-  background: #F6F9FC!important;
-}
+//body{
+//  background: #F6F9FC!important;
+//}
+//
 
-.form-style{
+    .form-style{
 
-    background: rgba(255, 255, 255, 0.7803921568627451);
-    margin: 25px auto;
-    border: 1px solid rgba(232, 232, 232, 0.9019607843);
-    box-shadow: 0px 3px 20px rgba(76, 76, 76, 0.10196078431372549);
+        background: rgba(255, 255, 255, 0.7803921568627451);
+        margin: 0 auto;
+        border: 1px solid rgba(232, 232, 232, 0.9019607843);
+        box-shadow: 0px 3px 20px rgba(76, 76, 76, 0.10196078431372549);
 
-     textarea{
-           height: 33px;
-     }
-      .v-toolbar__content{
-            padding: 14px !important;
-            height: auto !important;
+         textarea{
+               height: 33px;
+         }
+          .v-toolbar__content{
+                padding: 14px !important;
+                height: auto !important;
+          }
+
+    }
+
+
+  .v-list__tile.v-list__tile--link.theme--light{
+      &:hover{
+        background:#F0F7FF!important;
+      }
+  }
+  .v-content__wrap{
+    padding: 0 !important;
+   }
+  .v-content{
+
+  }
+
+  .v-list__tile.v-list__tile--link.theme--light{
+      &:focus{
+        background:lightgrey!important;
+      }
+  }
+
+      .v-navigation-drawer{
+        width: 280px!important;
       }
 
-}
-    .v-navigation-drawer{
-      background: #222C3C !important;
-    }
-
-    .own-sidebar{
-      .v-expansion-panel{
-        box-shadow: none;
-      }
-        .v-expansion-panel__header{
-          background: #2e3644!important;
-        }
-    }
-
-    .theme--light.v-expansion-panel .v-expansion-panel__container{
-         background: transparent;
-          color: #fff !important;
-          border-bottom: 1px solid rgba(144, 144, 144, 0.30196078431372547)!important;
-          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6)!important;
-    }
-
-    .v-expansion-panel__container.v-expansion-panel__container--active{
-      .v-expansion-panel__header{
-        background: #3d6994 !important;
-      }
-    }
-
+//
+//    .own-sidebar{
+//      .v-expansion-panel{
+//        box-shadow: none;
+//      }
+//        .v-expansion-panel__header{
+//          background: #2e3644!important;
+//        }
+//    }
+//
+//    .theme--light.v-expansion-panel .v-expansion-panel__container{
+//         background: transparent;
+//          color: #fff !important;
+//          border-bottom: 1px solid rgba(144, 144, 144, 0.30196078431372547)!important;
+//          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6)!important;
+//    }
+//
+//    .v-expansion-panel__container.v-expansion-panel__container--active{
+//      .v-expansion-panel__header{
+//        background: #3d6994
+//      }
+//    }
+//
     .v-content__wrap{
-          background-image: linear-gradient(256deg, rgba(58, 136, 115, 0.9) 0%, rgba(76, 157, 222, 0.6) 100%),
-          url(https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg);
-          background-size: cover;
+          //background-image: linear-gradient(256deg, rgba(58, 136, 115, 0.9) 0%, rgba(76, 157, 222, 0.6) 100%),
+          //url(https://images.pexels.com/photos/247786/pexels-photo-247786.jpeg);
+          //background-size: cover;
+          padding: 20px;
     }
+//
+//   .theme--light.v-footer{
+//      background: $own-primary!important;
+//    }
 
-   .theme--light.v-footer{
-      background: $own-primary!important;
+
+  //
+  //
+  .own-sidebar{
+
+        //a{
+        //       text-decoration: none;
+        //       color: #fff;
+        //       background: #1D2531;
+        //}
+
+  }
+  .v-list__tile__title{
+    a{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      text-decoration: none;
+          display: flex;
+          align-items: center;
+      i{
+        font-size: 20px;
+        padding-right: 6px;
+      }
     }
+  }
+  .router-link-exact-active.is-active{
+        font-weight: bold;
+        font-size: 16px;
+
+        i{
+             color: #12d1ff;
+         }
+
+  }
+
+  .w-100{
+    width: 100%;
+  }
+
+  .v-list--dense .v-list__tile:not(.v-list__tile--avatar){
+       border-bottom: 1px solid #f0f8ff;
+  }

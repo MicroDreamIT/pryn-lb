@@ -7,12 +7,10 @@
 @import '~sweetalert2/src/sweetalert2.scss';
 
 //variables
+
 $own-primary:#222c3c ;
 
-
-
 @import 'custom';
-
 
 
   .navbar-laravel {
@@ -21,26 +19,3 @@ $own-primary:#222c3c ;
   }
 
 
-
-
-  .own-sidebar{
-
-        a{
-               text-decoration: none;
-               color: #fff;
-               background: #1D2531;
-        }
-
-  }
-  .v-list__tile__title{
-    a{
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-    }
-  }
-
-  .w-100{
-    width: 100%;
-  }
