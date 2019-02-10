@@ -4,8 +4,9 @@ export default {
             name: '',
             age: '',
             care_of: '',
-            gender: 'male',
-            mobile_number:''
+            gender: 'Male',
+            mobile_number:'',
+            address: null
         }),
         methods: {
             submit() {
@@ -19,7 +20,13 @@ export default {
                             address: this.address,
                             mobile_number: this.mobile_number
                         }).then(res => {
-                            console.log(res)
+                           this.$root.successMessage(res.data),
+                            this.name='',
+                            this.age='',
+                            this.care_of='',
+                            this.gender='Male',
+                            this.address='',
+                            this.mobile_number=''
                         }).catch(err => {
                             console.log(err)
                         })

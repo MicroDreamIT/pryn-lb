@@ -79,7 +79,7 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
+
 
 # Flask stuff:
 instance/
@@ -134,3 +134,6 @@ db.sqlite3
 /static/css/
 /static/js/
 /static/fonts/
+/patient/migrations/
+/doctor/migrations/
+/lab/migrations/
