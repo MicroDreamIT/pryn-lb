@@ -6,22 +6,41 @@
 @import '~material-design-icons-iconfont/dist/material-design-icons.css';
 @import '~sweetalert2/src/sweetalert2.scss';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+//variables
+$own-primary:#222c3c ;
 
-.own-sidebar{
-  a{
-    text-decoration: none;
-    color: #49525a;
+
+
+@import 'custom';
+
+
+
+  .navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   }
-}
-.v-list__tile__title{
-  a{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
+
+
+
+
+  .own-sidebar{
+
+        a{
+               text-decoration: none;
+               color: #fff;
+               background: #1D2531;
+        }
+
   }
-}
+  .v-list__tile__title{
+    a{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .w-100{
+    width: 100%;
+  }

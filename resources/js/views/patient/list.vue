@@ -1,12 +1,11 @@
 <template>
 
+ <data-table></data-table>
 
 </template>
 
 <script>
-    export default {
-        name: "list.uve"
-    }
+
 </script>
 
 <style scoped>
