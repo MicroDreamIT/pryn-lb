@@ -45,8 +45,8 @@ const app = new Vue({
         successMessage(data){
             Swal.fire({
               position: 'center',
-              type: 'success',
-              title: data,
+              type:  data.type,
+              title: data.message,
               showConfirmButton: false,
               timer: 1500
             })

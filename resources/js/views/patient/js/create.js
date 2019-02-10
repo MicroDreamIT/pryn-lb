@@ -4,7 +4,7 @@ export default {
             name: '',
             age: '',
             care_of: '',
-            gender: 'male',
+            gender: 'Male',
             mobile_number:'',
             address: null
         }),
@@ -20,7 +20,13 @@ export default {
                             address: this.address,
                             mobile_number: this.mobile_number
                         }).then(res => {
-                           this.$root.successMessage(res.data)
+                           this.$root.successMessage(res.data),
+                            this.name='',
+                            this.age='',
+                            this.care_of='',
+                            this.gender='Male',
+                            this.address='',
+                            this.mobile_number=''
                         }).catch(err => {
                             console.log(err)
                         })
