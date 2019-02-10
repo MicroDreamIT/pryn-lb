@@ -1,8 +1,10 @@
+import simplejson as simplejson
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Patient
 import json
-
+from django.http import JsonResponse
+from django.core import serializers
 
 # Create your views here.
 def index(request):
@@ -21,5 +23,6 @@ def create(request):
                                address=data['address']
                                )
 
-        return HttpResponse(Patient.objects.filter(pk=patient.id).values())
+        # return HttpResponse(Patient.objects.filter(id=patient.id).values())
+        return HttpResponse('Patient Created Successfully')
 

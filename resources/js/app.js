@@ -6,12 +6,13 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import VueRouter from 'vue-router'
 import VeeValidate from 'vee-validate'
-
+const Swal = require('sweetalert2')
 Vue.use(VueRouter)
 Vue.use(Vuetify, {iconfont: 'mdi'})
 Vue.use(VeeValidate)
 
 import {default as adminRoute} from './routes/route'
+
 let rout = []
 const routes = rout.concat(
     adminRoute
@@ -39,5 +40,17 @@ const app = new Vue({
     data:{
         message:'Hi this is testing',
         drawer: null,
+    },
+    methods:{
+        successMessage(data){
+            Swal.fire({
+              position: 'center',
+              type: 'success',
+              title: data,
+              showConfirmButton: false,
+              timer: 1500
+            })
+
+        }
     }
 });

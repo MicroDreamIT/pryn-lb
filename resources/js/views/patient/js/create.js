@@ -20,7 +20,7 @@ export default {
                             address: this.address,
                             mobile_number: this.mobile_number
                         }).then(res => {
-                            console.log(res)
+                           this.$root.successMessage(res.data)
                         }).catch(err => {
                             console.log(err)
                         })
