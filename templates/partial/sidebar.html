@@ -8,20 +8,10 @@
              class="img-fluid d-block">
     </div>
 
-{# <v-expansion-panel>#}
-{##}
-{#                        <v-expansion-panel-content>#}
-{#                            <div slot="header" v-if="!isHidden">Dropdown</div>#}
-{#                                <v-card>#}
-{#                                    <v-card-text>#}
-{#                                       Item  Goes here#}
-{#                                    </v-card-text>#}
-{#                                </v-card>#}
-{#         </v-expansion-panel-content>#}
-{# </v-expansion-panel>#}
 
+{#    dashboard#}
 
-    <v-list-tile @click="">
+      <v-list-tile @click="">
         <v-list-tile-content>
             <v-list-tile-title>
                 <router-link :to="{name:'dashboard'}">
@@ -30,16 +20,49 @@
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
-    <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                <router-link :to="{name:'patientCreate'}">
-                     <i class="mdi mdi-comment-account-outline"></i>
-                    Patient
-                </router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-    </v-list-tile>
+
+{#    patient#}
+
+ <v-expansion-panel class="dashboard-dropdown">
+
+         <v-expansion-panel-content>
+            <div slot="header" v-if="!isHidden">
+                <i class="mdi mdi-comment-account-outline"></i> Patient
+            </div>
+                <v-card>
+                    <v-card-text>
+                       <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                    <router-link :to="{name:'patientCreate'}">
+                                         <i class="mdi mdi-comment-account-outline"></i>
+                                        Patient
+                                    </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+
+                        <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                    <router-link :to="{name:'patientList'}">
+                                        <i class="mdi mdi-settings"></i>
+                                        Manage patient
+                                    </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                    </v-card-text>
+                </v-card>
+         </v-expansion-panel-content>
+
+ </v-expansion-panel>
+
+
+
+
+
+
     <v-list-tile @click="">
         <v-list-tile-content>
             <v-list-tile-title>
@@ -50,6 +73,8 @@
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>
+
+
     <v-list-tile @click="">
         <v-list-tile-content>
             <v-list-tile-title>
@@ -83,14 +108,5 @@
         </v-list-tile-content>
     </v-list-tile>
 
-    <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                <router-link :to="{name:'patientList'}">
-                     <i class="mdi mdi-settings"></i>
-                    Manage patient
-                </router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-    </v-list-tile>
+
 </v-list>
