@@ -1,76 +1,101 @@
-<!--<template>-->
+<template>
 
-      <!--<v-container grid-list-lg class="form-style">-->
-          <!--<v-form ref="form" v-model="valid" lazy-validation>-->
-                  <!--<v-layout row wrap >-->
-                                <!--<v-flex xs12 md12>-->
-                                    <!--<v-toolbar card   color="secondary">-->
-                                     <!--<v-toolbar-title class="body-2 white&#45;&#45;text">Create New Patient</v-toolbar-title>-->
-                                <!--</v-toolbar>-->
-                                <!--</v-flex>-->
-                                <!--<v-flex xs12 md4>-->
-                                    <!--<v-card-text class="px-0">-->
-                                           <!--<v-text-field-->
-                                             <!--v-model="test_name"-->
-                                             <!--:counter="50"-->
-                                             <!--label="Test Name"-->
-                                             <!--required-->
-                                             <!--data-vv-name="test_name"-->
-                                             <!--v-validate="'required|max:50'"-->
-                                             <!--:error-messages="errors.collect('test_name')"-->
-                                             <!--clearable-->
-                                     <!--&gt;</v-text-field>-->
-                                    <!--</v-card-text>-->
-                                <!--</v-flex>-->
-                                <!--<v-flex xs12 md4>-->
-                                    <!--<v-card-text class="px-0">-->
-                                                     <!--<v-text-field-->
-                                                     <!--v-model="test_unit"-->
-                                                     <!--:counter="10"-->
-                                                     <!--label="Test Unit"-->
-                                                     <!--required-->
-                                                     <!--data-vv-name="test_unit"-->
-                                                     <!--v-validate="'required|max:10'"-->
-                                                     <!--:error-messages="errors.collect('test_unit')"-->
-                                                     <!--clearable-->
-                                             <!--&gt;</v-text-field>-->
-                                    <!--</v-card-text>-->
+      <v-container grid-list-lg class="form-style">
+          <v-form ref="form" v-model="valid" lazy-validation>
+                  <v-layout row wrap >
+                                <v-flex xs12 md12>
+                                    <v-toolbar card   color="secondary">
+                                     <v-toolbar-title class="body-2 white--text">Create New Patient</v-toolbar-title>
+                                </v-toolbar>
+                                </v-flex>
+                                <v-flex xs12 md4>
+                                    <v-card-text class="px-0">
+                                           <v-select
+                                                   v-model="name"
+                                                   :items="['test1', 'test2', 'Other']"
+                                                   label="Select Test"
+                                        ></v-select>
+                                    </v-card-text>
+                                </v-flex>
+                       <v-flex xs12 md4>
+                                    <v-card-text class="px-0">
+                                           <v-text-field
+                                             v-model="opinion"
+                                             label="Opinion"
+                                             :error-messages="errors.collect('opinion')"
+                                             clearable
+                                     ></v-text-field>
+                                    </v-card-text>
+                                </v-flex>
+                      <v-flex xs12 md4>
+                                    <v-card-text class="px-0">
+                                           <v-text-field
+                                             v-model="advice"
+                                             label="Advice"
+                                             :error-messages="errors.collect('advice')"
+                                             clearable
+                                     ></v-text-field>
+                                    </v-card-text>
+                                </v-flex>
+                      <v-flex xs12 md4>
+                                    <v-card-text class="px-0">
+                                           <v-text-field
+                                             v-model="prepared"
+                                             :counter="50"
+                                             label="Prepared by"
+                                             data-vv-name="prepared"
+                                             v-validate="'max:50'"
+                                             :error-messages="errors.collect('prepared')"
+                                             clearable
+                                     ></v-text-field>
+                                    </v-card-text>
+                                </v-flex>
+                      <v-flex xs12 md4>
+                                    <v-card-text class="px-0">
+                                           <v-text-field
+                                             v-model="checked_by"
+                                             :counter="50"
+                                             label="Checked by"
+                                             data-vv-name="checked_by"
+                                             v-validate="'max:50'"
+                                             :error-messages="errors.collect('checked_by')"
+                                             clearable
+                                     ></v-text-field>
+                                    </v-card-text>
+                                </v-flex>
+                      <v-flex xs12 md4>
+                                    <v-card-text class="px-0">
+                                           <v-text-field
+                                             v-model="technician"
+                                             :counter="50"
+                                             label="Lab Technician"
+                                             data-vv-name="technician"
+                                             v-validate="'max:50'"
+                                             :error-messages="errors.collect('technician')"
+                                             clearable
+                                     ></v-text-field>
+                                    </v-card-text>
+                                </v-flex>
 
-                                <!--</v-flex>-->
-                                <!--<v-flex xs12 md4>-->
+                                <v-flex xs12 md4>
+                                    <v-card-actions>
+                                        <v-btn @click="submit()" color="primary">submit
+                                          <v-icon dark right>check_circle</v-icon>
+                                        </v-btn>
 
-                                    <!--<v-card-text class="px-0">-->
-                                                 <!--<v-text-field-->
-                                                     <!--v-model="test_normal_range"-->
-                                                     <!--:counter="30"-->
-                                                     <!--label="Normal Range"-->
-                                                     <!--data-vv-name="test_normal_range"-->
-                                                     <!--v-validate="'required|max:30'"-->
-                                                     <!--:error-messages="errors.collect('test_normal_range')"-->
-                                                     <!--clearable-->
-                                             <!--&gt;</v-text-field>-->
-                                    <!--</v-card-text>-->
+                                         <v-btn color="red" @click="clear()" dark>Decline
+                                          <v-icon dark right>block</v-icon>
+                                        </v-btn>
+                                    </v-card-actions>
+                                </v-flex>
+                     </v-layout>
+              </v-form>
 
-                                <!--</v-flex>-->
-                                <!--<v-flex xs12 md4>-->
-                                    <!--<v-card-actions>-->
-                                        <!--<v-btn @click="submit()" color="primary">submit-->
-                                          <!--<v-icon dark right>check_circle</v-icon>-->
-                                        <!--</v-btn>-->
+      </v-container>
 
-                                         <!--<v-btn color="red" @click="clear()" dark>Decline-->
-                                          <!--<v-icon dark right>block</v-icon>-->
-                                        <!--</v-btn>-->
-                                    <!--</v-card-actions>-->
-                                <!--</v-flex>-->
-                     <!--</v-layout>-->
-              <!--</v-form>-->
-
-      <!--</v-container>-->
-
-<!--</template>-->
+</template>
 
 
 
 
-<!--<script src="./js/create.js"></script>-->
+<script src="./js/create.js"></script>

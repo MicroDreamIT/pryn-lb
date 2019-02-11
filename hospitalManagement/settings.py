@@ -42,7 +42,9 @@ INSTALLED_APPS = [
     'webpack_loader',
     'livereload',
     'doctor.apps.DoctorConfig',
-    'tests.apps.TestsConfig'
+    'tests.apps.TestsConfig',
+    'company.apps.CompanyConfig',
+    'diagnosis.apps.DiagnosisConfig'
 ]
 
 MIDDLEWARE = [
