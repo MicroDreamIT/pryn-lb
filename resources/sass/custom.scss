@@ -12,6 +12,21 @@ body{
 }
 
 
+      .v-toolbar{
+            box-shadow: -2px 2px 4px #00000038!important;
+      }
+
+    .brand-name{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 19px;
+      margin-top: 3px;
+      box-shadow: -2px 2px 4px #00000038;
+      padding-bottom: 8px;
+    }
+
+
     .form-style{
 
         background: rgba(255, 255, 255, 0.7803921568627451);
@@ -52,9 +67,7 @@ body{
         width: 280px!important;
       }
 
-      .own-sidebar{
-        margin-top: 60px;
-      }
+
 
 
 //
@@ -85,15 +98,8 @@ body{
 
   //
   //
-      .own-sidebar{
 
-            //a{
-            //       text-decoration: none;
-            //       color: #fff;
-            //       background: #1D2531;
-            //}
 
-      }
       .v-list__tile__title{
         a{
           position: absolute;
