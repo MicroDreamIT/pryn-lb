@@ -42,7 +42,7 @@
                     </v-flex>
 
                     <v-flex xs12 md4>
-                        <v-card color="indigo" class="white--text">
+                        <v-card color="#AED581" class="white--text">
                             <v-layout row>
                                 <v-flex xs5>
                                     <v-img class="dashboard-icons"
