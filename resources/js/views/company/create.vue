@@ -12,23 +12,23 @@
                                     <v-card-text class="px-0">
                                            <v-text-field
                                              v-model="name"
-                                             :counter="40"
+                                             :counter="50"
                                              label="Company Name"
                                              required
                                              data-vv-name="name"
-                                             v-validate="'required|max:40'"
+                                             v-validate="'required|max:50'"
                                              :error-messages="errors.collect('name')"  >
 
                                            </v-text-field>
 
                                           <v-text-field
                                             v-model="mobile"
-                                            mask="####-###########"
+                                            mask="###-################"
                                             required
                                             data-vv-name="mobile"
                                             label="Company Mobile No."
-                                            :counter="25"
-                                            v-validate="'required|max:25'"
+                                            :counter="20"
+                                            v-validate="'required|max:20'"
                                             :error-messages="errors.collect('mobile')"
                                             clearable
                                         ></v-text-field>
@@ -40,7 +40,9 @@
                                        <v-text-field
                                      v-model="sub_name"
                                      :counter="50"
+                                     data-vv-name="sub_name"
                                      label="Company Sub Name"
+                                     v-validate="'max:20'"
                                      :error-messages="errors.collect('sub_name')"
                                      clearable
                                          ></v-text-field>
@@ -49,7 +51,9 @@
                                                 v-model="email"
                                                 :rules="emailRules"
                                                 data-vv-name="email"
+                                                :counter="30"
                                                 label="Company E-mail"
+                                                v-validate="'max:30'"
                                                 :error-messages="errors.collect('email')"
                                                 clearable
                                         ></v-text-field>

@@ -10,23 +10,17 @@
                                 </v-flex>
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
-                                           <v-text-field
-                                             v-model="name"
-                                             :counter="50"
-                                             label="Test Name"
-                                             required
-                                             data-vv-name="name"
-                                             v-validate="'required|max:50'"
-                                             :error-messages="errors.collect('name')"
-                                             clearable
-                                     ></v-text-field>
+                                           <v-select
+                                                   v-model="name"
+                                                   :items="['test1', 'test2', 'Other']"
+                                                   label="Select Test"
+                                        ></v-select>
                                     </v-card-text>
                                 </v-flex>
                        <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                            <v-text-field
                                              v-model="opinion"
-                                             :counter="100"
                                              label="Opinion"
                                              :error-messages="errors.collect('opinion')"
                                              clearable
@@ -37,7 +31,6 @@
                                     <v-card-text class="px-0">
                                            <v-text-field
                                              v-model="advice"
-                                             :counter="40"
                                              label="Advice"
                                              :error-messages="errors.collect('advice')"
                                              clearable
@@ -48,8 +41,10 @@
                                     <v-card-text class="px-0">
                                            <v-text-field
                                              v-model="prepared"
-                                             :counter="40"
+                                             :counter="50"
                                              label="Prepared by"
+                                             data-vv-name="prepared"
+                                             v-validate="'max:50'"
                                              :error-messages="errors.collect('prepared')"
                                              clearable
                                      ></v-text-field>
@@ -59,8 +54,10 @@
                                     <v-card-text class="px-0">
                                            <v-text-field
                                              v-model="checked_by"
-                                             :counter="40"
+                                             :counter="50"
                                              label="Checked by"
+                                             data-vv-name="checked_by"
+                                             v-validate="'max:50'"
                                              :error-messages="errors.collect('checked_by')"
                                              clearable
                                      ></v-text-field>
@@ -70,8 +67,10 @@
                                     <v-card-text class="px-0">
                                            <v-text-field
                                              v-model="technician"
-                                             :counter="40"
+                                             :counter="50"
                                              label="Lab Technician"
+                                             data-vv-name="technician"
+                                             v-validate="'max:50'"
                                              :error-messages="errors.collect('technician')"
                                              clearable
                                      ></v-text-field>

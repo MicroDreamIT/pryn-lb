@@ -45,8 +45,11 @@
 
                         <v-text-field
                                 v-model="care_of"
-                                :counter="25"
+                                :counter="50"
                                 label="Care of"
+                                data-vv-name="care_of"
+                                v-validate="'max:50'"
+                                :error-messages="errors.collect('care_of')"
                                 clearable
                         ></v-text-field>
                     </v-card-text>
@@ -57,16 +60,22 @@
                     <v-card-text class="px-0">
                         <v-text-field
                                 v-model="mobile"
-                                mask="####-############"
+                                mask="####-###############"
                                 label="Mobile Number"
-                                :counter="25"
+                                :counter="20"
+                                data-vv-name="mobile"
+                                v-validate="'max:50'"
+                                :error-messages="errors.collect('mobile')"
                                 clearable
                         ></v-text-field>
                         <v-textarea
                                 name="address"
                                 v-model="address"
                                 label="Address"
-                                hint="Address goes here"
+                                :counter="100"
+                                data-vv-name="address"
+                                v-validate="'required|max:100'"
+                                :error-messages="errors.collect('address')"
                                 clearable
                         ></v-textarea>
 

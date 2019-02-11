@@ -14,8 +14,10 @@ def create(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         diagnosis = Diagnosis.objects.create(name=data['name'],
-                                             unit=data['unit'],
-                                             range=data['range'],
+                                             # unit=data['unit'],
+                                             # range=data['range'],
+                                             unit='oo',
+                                             range='oo',
                                              result=data['result'],
                                              opinion=data['comments'],
                                              advice=data['advice'],
