@@ -30,6 +30,11 @@ module.exports = [
         name: 'doctorCreate',
         component: require('../views/doctor/create').default
     },
+    {
+        path: '/diagnosis/create',
+        name: 'diagnosisCreate',
+        component: require('../views/diagnosis/create').default
+    },
 
 
 ]

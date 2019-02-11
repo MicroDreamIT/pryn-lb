@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'livereload',
     'doctor.apps.DoctorConfig',
     'tests.apps.TestsConfig',
-    'company.apps.CompanyConfig'
+    'company.apps.CompanyConfig',
+    'diagnosis.apps.DiagnosisConfig'
 ]
 
 MIDDLEWARE = [

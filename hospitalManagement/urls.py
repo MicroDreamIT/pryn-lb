@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^ajax/doctor/', include('doctor.urls')),
     url(r'^ajax/tests/', include('tests.urls')),
     url(r'^ajax/company/', include('company.urls')),
+    url(r'^ajax/diagnosis/', include('diagnosis.urls')),
     url(r'^.*$', views.index)
 ]
