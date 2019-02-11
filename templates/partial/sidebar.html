@@ -1,103 +1,85 @@
 
 
 <v-list dense class="own-sidebar">
+    
+    <div class="brand-name">
+        <img src="https://ww1.prweb.com/prfiles/2018/10/22/15860484/gI_67783_ForteBio%20logo_powering%20biologics.png"
+             alt="brand logo "
+             class="img-fluid d-block">
+    </div>
 
-{#    dashboard#}
-
-       <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                <router-link :to="{name:'dashboard'}">
-                    <i class="mdi mdi-chart-pie"></i>
-                    Dashboard
-                </router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-       </v-list-tile>
-
-      {#    patient  #}
-
-
- <v-expansion-panel focusable>
-   <v-expansion-panel-content>
-       <div slot="header" >Patient</div>
-        <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                <router-link :to="{name:'patientCreate'}">
-                    <i class="mdi mdi-chart-pie"></i>
-                    Patient-Creat
-                </router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-    </v-list-tile>
-    </v-expansion-panel-content>
- </v-expansion-panel>
-
-
-    {#    Doctors #}
-
-
- <v-expansion-panel focusable>
-   <v-expansion-panel-content>
-       <div slot="header" >Doctors</div>
-        <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                  <router-link :to="{name:'doctorCreate'}">Doctors</router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-
-    </v-list-tile>
-    </v-expansion-panel-content>
- </v-expansion-panel>
-
-
-                    {# Test - Items#}
-
-
-     <v-expansion-panel focusable>
-   <v-expansion-panel-content>
-       <div slot="header" >Tests</div>
-        <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                  <router-link :to="{name:'diagnosisCreate'}">Diagnosis</router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-
-    </v-list-tile>
-    </v-expansion-panel-content>
- </v-expansion-panel>
-
-                    {# Company  #}
-
-
-     <v-expansion-panel focusable>
-   <v-expansion-panel-content>
-       <div slot="header" >Company</div>
-        <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                 <router-link :to="{name:'companyCreate'}">Company</router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-
-    </v-list-tile>
-    </v-expansion-panel-content>
- </v-expansion-panel>
-
-
-
+{# <v-expansion-panel>#}
+{##}
+{#                        <v-expansion-panel-content>#}
+{#                            <div slot="header" v-if="!isHidden">Dropdown</div>#}
+{#                                <v-card>#}
+{#                                    <v-card-text>#}
+{#                                       Item  Goes here#}
+{#                                    </v-card-text>#}
+{#                                </v-card>#}
+{#         </v-expansion-panel-content>#}
+{# </v-expansion-panel>#}
 
 
     <v-list-tile @click="">
-        <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
-        </v-list-tile-action>
         <v-list-tile-content>
             <v-list-tile-title>
-                <router-link :to="{name:'patientList'}">Manage patient</router-link>
+                <router-link :to="{name:'dashboard'}">
+                   <i class="mdi mdi-apps"></i>  Dashboard
+                </router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
+    <v-list-tile @click="">
+        <v-list-tile-content>
+            <v-list-tile-title>
+                <router-link :to="{name:'patientCreate'}">
+                     <i class="mdi mdi-comment-account-outline"></i>
+                    Patient
+                </router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
+    <v-list-tile @click="">
+        <v-list-tile-content>
+            <v-list-tile-title>
+                <router-link :to="{name:'doctorCreate'}">
+                  <i class="mdi mdi-comment-account-outline"></i>
+                    Doctors
+                </router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
+
+    <v-list-tile @click="">
+        <v-list-tile-content>
+            <v-list-tile-title>
+                <router-link :to="{name:'testsCreate'}">
+                     <i class="mdi mdi-airballoon"></i>
+                    Test Item
+                </router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
+
+    <v-list-tile @click="">
+        <v-list-tile-content>
+            <v-list-tile-title>
+                <router-link :to="{name:'companyCreate'}">
+                     <i class="mdi mdi-home-modern"></i>
+                    Company
+                </router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
+
+    <v-list-tile @click="">
+        <v-list-tile-content>
+            <v-list-tile-title>
+                <router-link :to="{name:'patientList'}">
+                     <i class="mdi mdi-settings"></i>
+                    Manage patient
+                </router-link>
             </v-list-tile-title>
         </v-list-tile-content>
     </v-list-tile>

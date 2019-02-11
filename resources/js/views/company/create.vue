@@ -4,8 +4,8 @@
           <v-form ref="form" v-model="valid" lazy-validation>
                   <v-layout row wrap >
                                 <v-flex xs12 md12>
-                                    <v-toolbar card   color="secondary">
-                                     <v-toolbar-title class="body-2 white--text">Create New Patient</v-toolbar-title>
+                                    <v-toolbar card   color="primary">
+                                     <v-toolbar-title class="body-2 white--text">Create New Company</v-toolbar-title>
                                 </v-toolbar>
                                 </v-flex>
                                 <v-flex xs12 md4>

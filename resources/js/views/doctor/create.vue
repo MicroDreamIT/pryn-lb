@@ -4,20 +4,20 @@
           <v-form ref="form" v-model="valid" lazy-validation>
                   <v-layout row wrap >
                                 <v-flex xs12 md12>
-                                    <v-toolbar card   color="secondary">
+                                    <v-toolbar card   color="primary">
                                      <v-toolbar-title class="body-2 white--text">Create New Doctor</v-toolbar-title>
                                 </v-toolbar>
                                 </v-flex>
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                            <v-text-field
-                                                 v-model="dr_name"
+                                                 v-model="name"
                                                  :counter="30"
                                                  label="Doctor Name"
                                                  required
-                                                 data-vv-name="dr_name"
+                                                 data-vv-name="name"
                                                  v-validate="'required|max:30'"
-                                                 :error-messages="errors.collect('dr_name')"
+                                                 :error-messages="errors.collect('name')"
                                                  clearable
                                          ></v-text-field>
                                     </v-card-text>
@@ -25,11 +25,11 @@
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                           <v-text-field
-                                                v-model="dr_mobile_no"
+                                                v-model="mobile"
                                                 mask="####-###########"
                                                 label="Doctor's Mobile No."
                                                 :counter="25"
-                                                :error-messages="errors.collect('dr_mobile_no')"
+                                                :error-messages="errors.collect('mobile')"
                                                 clearable
                                             ></v-text-field>
                                     </v-card-text>
@@ -39,11 +39,11 @@
 
                                     <v-card-text class="px-0">
                                                      <v-text-field
-                                                        v-model="dr_email"
+                                                        v-model="email"
                                                         :rules="emailRules"
-                                                        data-vv-name="dr_email"
+                                                        data-vv-name="email"
                                                         label="Doctor's E-mail"
-                                                        :error-messages="errors.collect('dr_email')"
+                                                        :error-messages="errors.collect('email')"
                                                         clearable
                                                 ></v-text-field>
 
