@@ -3,9 +3,8 @@
             :url="url"
             :tableHeadline="'Manage Doctor'"
             :headers="headers"
-
-
     >
+
         <template slot="table" slot-scope="props">
             <td>{{ props.data.name }}</td>
             <td class="text-xs-center">{{ props.data.mobile }}</td>
@@ -38,7 +37,16 @@
             ],
 
         }),
-        methods: {}
+        methods: {
+            editItem(item) {
+                alert('I am Edit Item')
+            },
+
+            deleteItem(item) {
+
+               alert('I am delete bro')
+            },
+        }
     }
 </script>
 

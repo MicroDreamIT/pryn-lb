@@ -44,7 +44,16 @@
             ],
 
         }),
-        methods: {}
+        methods: {
+            editItem(item) {
+                alert('I am Edit Item')
+            },
+
+            deleteItem(item) {
+
+               alert('I am delete bro')
+            },
+        }
     }
 </script>
 
