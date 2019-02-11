@@ -1,4 +1,3 @@
-from django.core import serializers
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Patient
@@ -15,13 +14,15 @@ def create(request):
 
     if request.method == 'POST':
         data = json.loads(request.body)
-        Patient.objects.create(name=data['name'],
+        patient = Patient.objects.create(name=data['name'],
                                          age=data['age'],
                                          gender=data['gender'],
                                          ref_no='R001',
                                          care_of=data['care_of'],
                                          address=data['address'],
-                                         mobile_no=data['mobile_no'])
+                                         mobile=data['mobile'])
+
+        # return HttpResponse(Patient.objects.filter(id=patient.id).values())
         return JsonResponse({'type': 'success', 'message': 'Patient Created Successfully'})
 
 
