@@ -24,6 +24,11 @@ module.exports = [
         name: 'testsCreate',
         component: require('../views/tests/create').default
     },
+    {
+        path: '/test',
+        name: 'testsList',
+        component: require('../views/tests/list').default
+    },
 
     {
         path: '/doctor/create',

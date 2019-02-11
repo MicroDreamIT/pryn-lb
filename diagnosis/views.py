@@ -19,10 +19,10 @@ def create(request):
                                              unit='oo',
                                              range='oo',
                                              result=data['result'],
-                                             opinion=data['comments'],
+                                             opinion=data['opinion'],
                                              advice=data['advice'],
                                              prepared=data['prepared'],
-                                             checked_by=data['checked'],
+                                             checked_by=data['checked_by'],
                                              technician=data['technician'])
         # return HttpResponse(diagnosis.objects.filter(id=patient.id).values())
         return JsonResponse({'type': 'success', 'message': 'Diagnosis Created Successfully'})
