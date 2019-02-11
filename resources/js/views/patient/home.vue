@@ -6,9 +6,9 @@
       <v-container fluid grid-list-lg >
           <v-layout>
               <v-flex xs12 >
-                 <v-card class="pt-2 pl-2 pb-2">
+                 <v-card class="pt-2 pl-2 pb-2 primary--text">
                       <h3>
-                          Dashboard
+                        <i class="mdi mdi-apps"></i>   Dashboard
                       </h3>
                  </v-card>
               </v-flex>
@@ -29,7 +29,7 @@
                   <v-card-title primary-title>
                     <div>
                       <div class="headline">Doctors</div>
-                      <div>42</div>
+                      <div>402</div>
                     </div>
                   </v-card-title>
                 </v-flex>
@@ -55,7 +55,7 @@
                   <v-card-title primary-title>
                     <div>
                       <div class="headline">Nurse</div>
-                      <div>42</div>
+                      <div>122</div>
                     </div>
                   </v-card-title>
                 </v-flex>
@@ -81,7 +81,7 @@
                   <v-card-title primary-title>
                     <div>
                       <div class="headline">Pharmacist</div>
-                      <div>42</div>
+                      <div>40</div>
                     </div>
                   </v-card-title>
                 </v-flex>
@@ -107,7 +107,7 @@
                   <v-card-title primary-title>
                     <div>
                       <div class="headline">Laboratorist</div>
-                      <div>42</div>
+                      <div>54</div>
                     </div>
                   </v-card-title>
                 </v-flex>
@@ -159,7 +159,7 @@
                   <v-card-title primary-title>
                     <div>
                       <div class="headline">Patient</div>
-                      <div>42</div>
+                      <div>126</div>
                     </div>
                   </v-card-title>
                 </v-flex>
@@ -185,7 +185,7 @@
                   <v-card-title primary-title>
                     <div>
                       <div class="headline">Madicines</div>
-                      <div>42</div>
+                      <div>12</div>
                     </div>
                   </v-card-title>
                 </v-flex>
