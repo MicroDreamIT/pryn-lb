@@ -35,6 +35,11 @@ module.exports = [
         name: 'doctorList',
         component: require('../views/doctor/list').default
     },
+    {
+        path: '/diagnosis/create',
+        name: 'diagnosisCreate',
+        component: require('../views/diagnosis/create').default
+    },
 
 
 ]

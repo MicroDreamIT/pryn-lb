@@ -12,11 +12,11 @@
                                     <v-card-text class="px-0">
                                            <v-text-field
                                                  v-model="name"
-                                                 :counter="30"
+                                                 :counter="50"
                                                  label="Doctor Name"
                                                  required
                                                  data-vv-name="name"
-                                                 v-validate="'required|max:30'"
+                                                 v-validate="'required|max:50'"
                                                  :error-messages="errors.collect('name')"
                                                  clearable
                                          ></v-text-field>
@@ -26,9 +26,11 @@
                                     <v-card-text class="px-0">
                                           <v-text-field
                                                 v-model="mobile"
-                                                mask="####-###########"
+                                                mask="####-###############"
                                                 label="Doctor's Mobile No."
-                                                :counter="25"
+                                                :counter="20"
+                                                data-vv-name="mobile"
+                                                v-validate="'max:20'"
                                                 :error-messages="errors.collect('mobile')"
                                                 clearable
                                             ></v-text-field>
@@ -42,6 +44,7 @@
                                                         v-model="email"
                                                         :rules="emailRules"
                                                         data-vv-name="email"
+                                                        v-validate="'max:50'"
                                                         label="Doctor's E-mail"
                                                         :error-messages="errors.collect('email')"
                                                         clearable

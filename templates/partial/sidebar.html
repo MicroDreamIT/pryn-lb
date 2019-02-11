@@ -43,6 +43,16 @@
     <v-list-tile @click="">
         <v-list-tile-content>
             <v-list-tile-title>
+                <router-link :to="{name:'diagnosisCreate'}">
+                     <i class="mdi mdi-home-modern"></i>
+                    Diagnosis
+                </router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
+    <v-list-tile @click="">
+        <v-list-tile-content>
+            <v-list-tile-title>
                 <router-link :to="{name:'doctorCreate'}">
                   <i class="mdi mdi-comment-account-outline"></i>
                     Doctors

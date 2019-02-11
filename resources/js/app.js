@@ -52,5 +52,13 @@ const app = new Vue({
             })
 
         }
+    },
+    mounted(){
+
+            window.addEventListener('load', function() {
+                 let preload  =  document.getElementById("preload");
+                 preload.style.display = "none";
+            })
     }
+
 });
