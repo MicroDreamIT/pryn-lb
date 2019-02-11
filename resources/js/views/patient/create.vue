@@ -74,7 +74,7 @@
                                 label="Address"
                                 :counter="100"
                                 data-vv-name="address"
-                                v-validate="'required|max:100'"
+                                v-validate="'max:100'"
                                 :error-messages="errors.collect('address')"
                                 clearable
                         ></v-textarea>
