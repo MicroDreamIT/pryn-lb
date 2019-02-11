@@ -4,6 +4,7 @@ export default {
         name:'',
         unit:'',
         range:'',
+        type:'Heamatological',
     }),
     methods: {
         submit() {
@@ -13,6 +14,7 @@ export default {
                         name: this.name,
                         unit: this.unit,
                         range: this.range,
+                        type: this.type,
                     }).then(res => {
                         this.$root.successMessage(res.data)
                     }).catch(err => {
@@ -25,6 +27,7 @@ export default {
             this.name = ''
             this.unit =''
             this.range =''
+            this.type='Heamatological'
             this.$validator.reset()
         },
     }

@@ -20,6 +20,11 @@
                                              :error-messages="errors.collect('name')"
                                              clearable
                                      ></v-text-field>
+                                        <v-select
+                                                :items="['Heamatological', 'Immunological', 'Other']"
+                                             label="Test type"
+                                             v-model="type"
+                                        ></v-select>
                                     </v-card-text>
                                 </v-flex>
                                 <v-flex xs12 md4>
