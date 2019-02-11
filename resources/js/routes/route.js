@@ -19,11 +19,11 @@ module.exports = [
         name: 'companyCreate',
         component: require('../views/company/create').default
     },
-    {
-        path: '/diagnosis/create',
-        name: 'diagnosisCreate',
-        component: require('../views/diagnosis/create').default
-    },
+    // {
+    //     path: '/diagnosis/create',
+    //     name: 'diagnosisCreate',
+    //     component: require('../views/diagnosis/create').default
+    // },
 
     {
         path: '/doctor/create',
