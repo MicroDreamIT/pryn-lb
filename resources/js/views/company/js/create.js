@@ -1,11 +1,11 @@
 export default {
     data:()=> ({
         valid:true,
-        company_name:'',
-        company_sub_name:'',
-        company_mobile_no:'',
-        company_email:'',
-        company_address:'',
+        name:'',
+        sub_name:'',
+        mobile:'',
+        email:'',
+        address:'',
         emailRules: [
         v => /.+@.+/.test(v) || 'E-mail must be valid'
       ],
@@ -15,13 +15,13 @@ export default {
             this.$validator.validateAll().then(value => {
                 if (value) {
                     axios.post('/ajax/company/create', {
-                        company_name: this.company_name,
-                        company_sub_name: this.company_sub_name,
-                        company_address:this.company_address,
-                        company_email: this.company_email,
-                        company_mobile_no: this.company_mobile_no,
+                        name: this.name,
+                        sub_name: this.sub_name,
+                        address:this.address,
+                        email: this.email,
+                        mobile: this.mobile,
                     }).then(res => {
-                        console.log(res)
+                        this.$root.successMessage(res.data)
                     }).catch(err => {
                         console.log(err)
                     })
@@ -29,11 +29,11 @@ export default {
             })
         },
         clear() {
-            this.company_name = ''
-            this.company_sub_name=''
-            this.company_email =''
-            this.company_mobile_no =''
-            this.company_address=''
+            this.name = ''
+            this.sub_name=''
+            this.email =''
+            this.mobile =''
+            this.address=''
             this.$validator.reset()
         },
     }

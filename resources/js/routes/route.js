@@ -20,7 +20,7 @@ module.exports = [
         component: require('../views/company/create').default
     },
     {
-        path: '/tests/create',
+        path: '/test/create',
         name: 'testsCreate',
         component: require('../views/tests/create').default
     },

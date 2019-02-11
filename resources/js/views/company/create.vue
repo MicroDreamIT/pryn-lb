@@ -11,25 +11,25 @@
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                            <v-text-field
-                                             v-model="company_name"
+                                             v-model="name"
                                              :counter="40"
                                              label="Company Name"
                                              required
-                                             data-vv-name="company_name"
+                                             data-vv-name="name"
                                              v-validate="'required|max:40'"
-                                             :error-messages="errors.collect('company_name')"  >
+                                             :error-messages="errors.collect('name')"  >
 
                                            </v-text-field>
 
                                           <v-text-field
-                                            v-model="company_mobile_no"
+                                            v-model="mobile"
                                             mask="####-###########"
                                             required
-                                            data-vv-name="company_mobile_no"
-                                            label="Company's Mobile No."
+                                            data-vv-name="mobile"
+                                            label="Company Mobile No."
                                             :counter="25"
                                             v-validate="'required|max:25'"
-                                            :error-messages="errors.collect('company_mobile_no')"
+                                            :error-messages="errors.collect('mobile')"
                                             clearable
                                         ></v-text-field>
                                     </v-card-text>
@@ -38,22 +38,19 @@
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                        <v-text-field
-                                     v-model="company_sub_name"
+                                     v-model="sub_name"
                                      :counter="50"
                                      label="Company Sub Name"
-                                     required
-                                     data-vv-name="company_sub_name"
-                                     v-validate="'required|max:50'"
-                                     :error-messages="errors.collect('company_sub_name')"
+                                     :error-messages="errors.collect('sub_name')"
                                      clearable
                                          ></v-text-field>
 
                                           <v-text-field
-                                                v-model="company_email"
+                                                v-model="email"
                                                 :rules="emailRules"
-                                                data-vv-name="company_email"
-                                                label="Company's E-mail"
-                                                :error-messages="errors.collect('company_email')"
+                                                data-vv-name="email"
+                                                label="Company E-mail"
+                                                :error-messages="errors.collect('email')"
                                                 clearable
                                         ></v-text-field>
 
@@ -64,23 +61,15 @@
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                          <v-text-field
-                                                         v-model="company_address"
-                                                         :counter="50"
+                                                         v-model="address"
+                                                         :counter="100"
                                                          label="Company Address"
                                                          required
-                                                         data-vv-name="company_address"
-                                                         v-validate="'required|max:50'"
-                                                         :error-messages="errors.collect('company_address')"
+                                                         data-vv-name="address"
+                                                         v-validate="'required|max:100'"
+                                                         :error-messages="errors.collect('address')"
                                                          clearable
                                                  ></v-text-field>
-                                         <v-text-field
-                                                v-model="company_email"
-                                                :rules="emailRules"
-                                                data-vv-name="company_email"
-                                                label="Company's E-mail"
-                                                :error-messages="errors.collect('company_email')"
-                                                clearable
-                                        ></v-text-field>
                                     </v-card-text>
 
                                 </v-flex>
