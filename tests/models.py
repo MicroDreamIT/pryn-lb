@@ -5,6 +5,7 @@ class Tests(models.Model):
     name = models.CharField(max_length=40)
     unit = models.CharField(max_length=10, null=True)
     range = models.CharField(max_length=30, null=True)
+    type = models.CharField(max_length=20)
 
 
 def __str__(self):

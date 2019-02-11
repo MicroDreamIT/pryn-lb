@@ -15,7 +15,8 @@ def create(request):
         data = json.loads(request.body)
         test = Tests.objects.create(name=data['name'],
                                     unit=data['unit'],
-                                    range=data['range'])
+                                    range=data['range'],
+                                    type=data['type'])
         # return HttpResponse(test.objects.filter(id=patient.id).values())
         return JsonResponse({'type': 'success', 'message': 'Test Created Successfully'})
 

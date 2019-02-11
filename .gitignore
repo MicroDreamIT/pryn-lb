@@ -137,3 +137,5 @@ db.sqlite3
 /patient/migrations/
 /doctor/migrations/
 /lab/migrations/
+/tests/migrations/__init__.py
+/tests/migrations/0001_initial.py
