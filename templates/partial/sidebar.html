@@ -96,6 +96,16 @@
     <v-list-tile @click="">
         <v-list-tile-content>
             <v-list-tile-title>
+                <router-link :to="{name:'testsList'}">
+                     <i class="mdi mdi-settings"></i>
+                    Manage Test Item
+                </router-link>
+            </v-list-tile-title>
+        </v-list-tile-content>
+    </v-list-tile>
+    <v-list-tile @click="">
+        <v-list-tile-content>
+            <v-list-tile-title>
                 <router-link :to="{name:'doctorList'}">
                      <i class="mdi mdi-settings"></i>
                     Manage Doctor
