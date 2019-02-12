@@ -17,13 +17,15 @@
 
         .dashboard-dropdown {
           box-shadow: none;
-          border-bottom: 1px solid #f0f8ff;
           font-size: 14px;
           color: red;
 
 
 
           .v-expansion-panel__header {
+            &:hover{
+                background: rgba(208, 234, 253, 0.18823529411764706);
+            }
 
              .v-expansion-panel__header__icon{
                i{
@@ -130,6 +132,7 @@
         }
 
         .v-list__tile.v-list__tile--link.theme--light {
+          height: 47px;
           &:focus {
             background: lightgrey !important;
           }

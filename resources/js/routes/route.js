@@ -20,6 +20,11 @@ module.exports = [
         component: require('../views/patient/edit').default
     },
     {
+        path: '/patient/edit',
+        name: 'patientEdit',
+        component: require('../views/patient/edit').default
+    },
+    {
         path: '/company/create',
         name: 'companyCreate',
         component: require('../views/company/create').default
@@ -50,6 +55,4 @@ module.exports = [
         name: 'diagnosisCreate',
         component: require('../views/diagnosis/create').default
     },
-
-
 ]
