@@ -1,7 +1,7 @@
 
 
 <v-list dense class="own-sidebar">
-    
+
     <div class="brand-name">
         <img src="https://ww1.prweb.com/prfiles/2018/10/22/15860484/gI_67783_ForteBio%20logo_powering%20biologics.png"
              alt="brand logo "
@@ -62,7 +62,7 @@
        {# diagonosis#}
 
      <v-expansion-panel-content>
-            <div slot="header" v-if="!isHidden">
+            <div slot="header">
                 <i class="mdi mdi-comment-account-outline"></i> Diagnosis
             </div>
                 <v-card>
@@ -81,7 +81,7 @@
                         <v-list-tile @click="">
                             <v-list-tile-content>
                                 <v-list-tile-title>
-                                    <router-link  >
+                                    <router-link :to="{name:'diagnosisCreate'}">
                                         <i class="mdi mdi-settings"></i>
                                         Manage Diagnosis
                                     </router-link>
@@ -95,7 +95,7 @@
      {# Doctors#}
 
      <v-expansion-panel-content>
-            <div slot="header" v-if="!isHidden">
+            <div slot="header">
                 <i class="mdi mdi-comment-account-outline"></i> Doctors
             </div>
                 <v-card>
@@ -114,7 +114,7 @@
                         <v-list-tile @click="">
                             <v-list-tile-content>
                                 <v-list-tile-title>
-                                    <router-link  >
+                                    <router-link :to="{name:'doctorList'}">
                                         <i class="mdi mdi-settings"></i>
                                         Manage Doctors
                                     </router-link>
@@ -128,7 +128,7 @@
      {# Test Items #}
 
      <v-expansion-panel-content>
-            <div slot="header" v-if="!isHidden">
+            <div slot="header">
                 <i class="mdi mdi-comment-account-outline"></i> Test's
             </div>
                 <v-card>
@@ -147,7 +147,7 @@
                         <v-list-tile @click="">
                             <v-list-tile-content>
                                 <v-list-tile-title>
-                                    <router-link  >
+                                    <router-link :to="{name:'testsCreate'}">
                                         <i class="mdi mdi-settings"></i>
                                         Manage Test's
                                     </router-link>
@@ -161,7 +161,7 @@
      {# Company  #}
 
      <v-expansion-panel-content>
-            <div slot="header" v-if="!isHidden">
+            <div slot="header">
                 <i class="mdi mdi-comment-account-outline"></i> Company
             </div>
                 <v-card>
@@ -180,7 +180,7 @@
                         <v-list-tile @click="">
                             <v-list-tile-content>
                                 <v-list-tile-title>
-                                    <router-link  >
+                                    <router-link :to="{name:'companyCreate'}">
                                         <i class="mdi mdi-settings"></i>
                                         Manage Company
                                     </router-link>

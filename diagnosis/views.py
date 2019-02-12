@@ -1,18 +1,22 @@
 from django.http import HttpResponse
 from .models import Diagnosis
+from patient.models import Patient
+from tests.models import Tests
 import json
 from django.http import JsonResponse
 
 
-
-# Create your views here.
 def index(request):
     return HttpResponse('hello world i am index')
 
 
 def create(request):
-    query = Diagnosis.objects.filter(pk=1)
-    return JsonResponse({'result': list(query.values())})
+    patients = Patient.objects.all(pk=1)
+    patients = Tests.objects.all(pk=1)
+    return JsonResponse({
+        'patients': list(patients.values()),
+        'tests': list(patients.values())
+    })
 
 
 def store(request):
