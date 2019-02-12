@@ -74,7 +74,7 @@
                                 label="Address"
                                 :counter="100"
                                 data-vv-name="address"
-                                v-validate="'required|max:100'"
+                                v-validate="'max:100'"
                                 :error-messages="errors.collect('address')"
                                 clearable
                         ></v-textarea>
@@ -84,12 +84,14 @@
                 </v-flex>
                 <v-flex xs12 md4>
                     <v-card-actions>
-                        <v-btn @click="submit()" color="primary">submit
-                            <v-icon dark right>check_circle</v-icon>
+                        <v-btn @click="submit()" color="primary">
+                            submit
+                            <!--<v-icon dark right>check_circle</v-icon>-->
                         </v-btn>
 
-                        <v-btn color="red" @click="clear()" dark>Decline
-                            <v-icon dark right>block</v-icon>
+                        <v-btn color="red" @click="clear()" dark>
+                            Decline
+                            <!--<v-icon dark right>block</v-icon>-->
                         </v-btn>
                     </v-card-actions>
                 </v-flex>
