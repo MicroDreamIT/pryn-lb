@@ -1,13 +1,16 @@
 export default {
     data:()=> ({
         valid:true,
-        name:'',
+        patient:{},
         result:'',
         opinion:'',
         advice:'',
         prepared:'',
         checked_by:'',
         technician:'',
+        date: new Date().toISOString().substr(0, 10),
+      menu: false,
+      modal: false,
     }),
     methods: {
         submit() {

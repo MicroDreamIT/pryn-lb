@@ -8,12 +8,37 @@
                                      <v-toolbar-title class="body-2 white--text">Create New Patient</v-toolbar-title>
                                 </v-toolbar>
                                 </v-flex>
+
+                                 <v-flex xs12 md4>
+                                     <v-card-text class="px-0">
+        <v-menu
+        v-model="menu"
+        :close-on-content-click="false"
+        :nudge-right="40"
+        lazy
+        transition="scale-transition"
+        offset-y
+        full-width
+        min-width="290px"
+      >
+        <v-text-field
+          slot="activator"
+          v-model="date"
+          label="Picker without buttons"
+          prepend-icon="event"
+          readonly
+        ></v-text-field>
+        <v-date-picker v-model="date" @input="menu = false"></v-date-picker>
+      </v-menu>
+                                     </v-card-text>
+                                </v-flex>
+
                                 <v-flex xs12 md4>
                                     <v-card-text class="px-0">
                                            <v-select
-                                                   v-model="name"
+                                                   v-model="patient"
                                                    :items="['test1', 'test2', 'Other']"
-                                                   label="Select Test"
+                                                   label="Select Patient"
                                         ></v-select>
                                     </v-card-text>
                                 </v-flex>
