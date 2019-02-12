@@ -11,21 +11,26 @@
           }
         }
 
+        .v-toolbar__title:not(:first-child) {
+          margin-left: 0 !important;
+          }
+
         .dashboard-dropdown {
           box-shadow: none;
           border-bottom: 1px solid #f0f8ff;
           font-size: 14px;
           color: red;
 
-          .router-link-exact-active.is-active {
-            font-weight: bold;
-            font-size: 13.4px;
-            i {
-              color: #83d22a;
-            }
-          }
+
 
           .v-expansion-panel__header {
+
+             .v-expansion-panel__header__icon{
+               i{
+                 color:$own-primary  !important;
+               }
+             }
+
             div {
               display: flex;
               align-items: center;
@@ -48,6 +53,14 @@
             }
           }
         }
+
+        .router-link-exact-active.is-active {
+            font-weight: bold;
+            font-size: 13.4px;
+            i {
+              color: #83d22a;
+            }
+          }
 
         .v-card__text {
           padding: 0 !important;
