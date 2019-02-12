@@ -21,9 +21,8 @@ def create(request):
                                              result=data['result'],
                                              opinion=data['opinion'],
                                              advice=data['advice'],
-                                             prepared=data['prepared'],
-                                             checked_by=data['checked_by'],
-                                             technician=data['technician'])
+                                             refer_by=data['refer_by'],
+                                             )
         # return HttpResponse(diagnosis.objects.filter(id=patient.id).values())
         return JsonResponse({'type': 'success', 'message': 'Diagnosis Created Successfully'})
 

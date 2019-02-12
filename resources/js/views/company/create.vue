@@ -77,7 +77,17 @@
                                     </v-card-text>
 
                                 </v-flex>
-
+<v-flex xs12 md4>
+					<img :src="imageUrl" height="150" v-if="imageUrl"/>
+					<v-text-field label="Select Company Logo" @click='pickFile' v-model='imageName' prepend-icon='attach_file'></v-text-field>
+					<input
+						type="file"
+						style="display: none"
+						ref="image"
+						accept="image/*"
+						@change="onFilePicked"
+					>
+				</v-flex>
                                 <v-flex xs12 md12>
                                     <v-card-actions>
                                         <v-btn @click="submit()" color="primary">submit
