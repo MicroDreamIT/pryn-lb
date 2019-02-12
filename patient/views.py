@@ -41,3 +41,23 @@ def create(request):
         return JsonResponse({'type': 'success', 'message': 'Patient Created Successfully'})
 
 
+def edit(request, id):
+    patient= Patient.objects.filter(id=id).values()
+    return JsonResponse({'result': list(patient)})
+
+
+def update(request, id):
+    if request.method == 'PATCH':
+        data = json.loads(request.body)
+        Patient.objects.filter(id=id).update(
+            name=data['name'],
+            age=data['age'],
+            gender=data['gender'],
+            ref_no='R001',
+            care_of=data['care_of'],
+            address=data['address'],
+            mobile=data['mobile']
+        )
+        return JsonResponse({'type': 'success', 'message': 'Patient Update Successfully'})
+
+

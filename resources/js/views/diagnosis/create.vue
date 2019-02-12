@@ -46,7 +46,7 @@
                 <v-flex xs12 md4>
                     <v-card-text class="px-0">
                         <v-select
-                                v-model="patient"
+                                v-model="referred_by"
                                 :items="['test1', 'test2', 'Other']"
                                 label="Select Referred By"
                         ></v-select>
@@ -54,28 +54,17 @@
                     </v-card-text>
                 </v-flex>
 
-                 <v-flex xs12 md4>
-
-                </v-flex>
                 <template>
                 <v-layout v-for="(item,index) in reportData" :key="index">
-                 <v-flex xs12 md3>
-                    <v-card-text class="px-0">
-                        <v-select
-                                v-model="item.type"
-                                :items="['test1', 'test2', 'Other']"
-                                label="Diagnosis Type"
-                        ></v-select>
 
-                    </v-card-text>
-                </v-flex>
                 <v-flex xs12 md3>
                     <v-card-text class="px-0">
-                        <v-select
+                        <v-autocomplete
                                 v-model="item.test"
-                                :items="['test1', 'test2', 'Other']"
+                                :items="['FBS', 'CBC', 'RBS']"
                                 label="Test Name"
-                        ></v-select>
+
+                        ></v-autocomplete>
 
                     </v-card-text>
                 </v-flex>
@@ -92,19 +81,7 @@
 
                     </v-card-text>
                 </v-flex>
-                    <v-flex xs12 md2>
-                    <v-card-text class="px-0">
-                          <v-text-field
-                                v-model="item.lab_no"
-                                label="Lab No"
-                                required
-                                data-vv-name="lab_no"
-                                :error-messages="errors.collect('lab_no')"
-                                clearable
-                        ></v-text-field>
 
-                    </v-card-text>
-                </v-flex>
                   <v-flex xs1 md1 v-if="index==0">
                     <v-card-text class="px-0">
                           <v-btn @click="addMore()" color="primary">+ Add
@@ -115,7 +92,7 @@
                 </v-flex>
                   <v-flex xs1 md1 v-if="index!=0">
                     <v-card-text class="px-0">
-                          <v-btn @click="removeMore(index)" color="red">X remove
+                          <v-btn @click="removeMore(index)" color="red">X
                             <!--<v-icon dark right>check_circle</v-icon>-->
                         </v-btn>
 

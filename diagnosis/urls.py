@@ -5,5 +5,6 @@ app_name = 'diagnosis'
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('create', views.create, name='create')
+    path('create', views.create, name='create'),
+    path('store', views.store, name='store')
 ]

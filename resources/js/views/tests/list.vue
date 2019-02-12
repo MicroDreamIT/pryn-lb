@@ -3,6 +3,7 @@
             :url="url"
             :tableHeadline="'Manage Test Item'"
             :headers="headers"
+            :addBtnLink="'testsCreate'"
     >
         <template slot="table" slot-scope="props">
             <td>{{ props.data.name }}</td>

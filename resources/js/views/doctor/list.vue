@@ -3,6 +3,7 @@
             :url="url"
             :tableHeadline="'Manage Doctor'"
             :headers="headers"
+            :addBtnLink="'doctorCreate'"
     >
 
         <template slot="table" slot-scope="props">

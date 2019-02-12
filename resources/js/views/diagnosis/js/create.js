@@ -5,7 +5,7 @@ export default {
         result:'',
         type:'',
         test:'',
-        isHidden:'',
+        referred_by:'',
         checked_by:'',
         technician:'',
         date: new Date().toISOString().substr(0, 10),
@@ -15,16 +15,22 @@ export default {
             {
                 type:'',
                 test:'',
-                result:''
+                result:'',
+                lab_no:''
             }
         ],
     }),
+    created(){
+      axios.get('/ajax/diagnosis/create').then(res=>{
+            console.log('hi')
+      })
+    },
     methods: {
         submit() {
             this.$validator.validateAll().then(value => {
                 if (value) {
-                    axios.post('/ajax/diagnosis/create', {
-                        name: this.name,
+                    axios.post('/ajax/diagnosis/store', {
+                        date: this.date,
                         result: this.result,
                         opinion:this.opinion,
                         advice:this.advice,
@@ -40,7 +46,7 @@ export default {
             })
         },
         addMore(){
-                this.reportData.push({ type:'', test:'',result:''})
+                this.reportData.push({ type:'', test:'',result:'',lab_no:''})
         },
         removeMore(index){
             this.reportData.splice(index,1)

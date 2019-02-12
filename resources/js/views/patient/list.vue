@@ -3,8 +3,7 @@
             :url="url"
             :tableHeadline="'Manage Patient'"
             :headers="headers"
-
-
+            :addBtnLink="'patientCreate'"
     >
         <template slot="table" slot-scope="props">
             <td>{{ props.data.name }}</td>
@@ -14,7 +13,7 @@
             <td class="text-xs-center">{{ props.data.care_of }}</td>
             <td class="text-xs-center">{{ props.data.address }}</td>
             <td class="justify-center layout px-0">
-                <v-icon small class="mr-2" @click="editItem(props.data)">edit</v-icon>
+                <router-link :to="{name:'patientEdit',params:{id:props.data.id}}"><v-icon small class="mr-2">edit</v-icon></router-link>
                 <v-icon small @click="deleteItem(props.data)"> delete</v-icon>
             </td>
 

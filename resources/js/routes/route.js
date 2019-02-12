@@ -1,8 +1,8 @@
 module.exports = [
     {
-        path: '/patient/home',
+        path: '/home',
         name: 'dashboard',
-        component: require('../views/patient/home').default
+        component: require('../views/home').default
     },
      {
         path: '/patient/create',
@@ -13,6 +13,11 @@ module.exports = [
         path: '/patient',
         name: 'patientList',
         component: require('../views/patient/list').default
+    },
+       {
+        path: '/patient/:id/edit',
+        name: 'patientEdit',
+        component: require('../views/patient/edit').default
     },
     {
         path: '/company/create',
