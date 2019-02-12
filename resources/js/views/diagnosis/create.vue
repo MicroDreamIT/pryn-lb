@@ -12,58 +12,41 @@
                                     <v-card-text class="px-0">
                                            <v-select
                                                    v-model="name"
-                                                   :items="['test1', 'test2', 'Other']"
-                                                   label="Select Test"
+                                                   :items="['patient1', 'patient2', 'Other']"
+                                                   label="Select Patient"
                                         ></v-select>
-
-                                          <v-text-field
-                                             v-model="prepared"
-                                             :counter="50"
-                                             label="Prepared by"
-                                             data-vv-name="prepared"
-                                             v-validate="'max:50'"
-                                             :error-messages="errors.collect('prepared')"
-                                             clearable
-                                     ></v-text-field>
-                                    </v-card-text>
-                                </v-flex>
-                       <v-flex xs12 md4>
-                                    <v-card-text class="px-0">
-                                           <v-text-field
+<v-text-field
                                              v-model="opinion"
                                              label="Opinion"
                                              :error-messages="errors.collect('opinion')"
                                              clearable
                                      ></v-text-field>
 
-                                          <v-text-field
-                                             v-model="checked_by"
-                                             :counter="50"
-                                             label="Checked by"
-                                             data-vv-name="checked_by"
-                                             v-validate="'max:50'"
-                                             :error-messages="errors.collect('checked_by')"
+                                    </v-card-text>
+                                </v-flex>
+                       <v-flex xs12 md4>
+                                    <v-card-text class="px-0">
+                                        <v-select
+                                                   v-model="refer_by"
+                                                   :items="['doctor1', 'doctor2', 'Other']"
+                                                   label="Referred By"
+                                        ></v-select>
+                                        <v-text-field
+                                             v-model="advice"
+                                             label="Advice"
+                                             :error-messages="errors.collect('advice')"
                                              clearable
                                      ></v-text-field>
                                     </v-card-text>
                                 </v-flex>
                       <v-flex xs12 md4>
                                     <v-card-text class="px-0">
-                                           <v-text-field
-                                             v-model="advice"
-                                             label="Advice"
-                                             :error-messages="errors.collect('advice')"
-                                             clearable
-                                     ></v-text-field>
-                                          <v-text-field
-                                                     v-model="technician"
-                                                     :counter="50"
-                                                     label="Lab Technician"
-                                                     data-vv-name="technician"
-                                                     v-validate="'max:50'"
-                                                     :error-messages="errors.collect('technician')"
-                                                     clearable
-                                     ></v-text-field>
+                                        <v-select
+                                                   v-model="test_name"
+                                                   :items="['test1', 'test2', 'Other']"
+                                                   label="Select Test"
+                                        ></v-select>
+
                                     </v-card-text>
 
 

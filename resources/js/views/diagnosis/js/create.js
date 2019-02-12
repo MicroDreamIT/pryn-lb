@@ -2,12 +2,11 @@ export default {
     data:()=> ({
         valid:true,
         name:'',
+        test_name:'',
         result:'',
         opinion:'',
         advice:'',
-        prepared:'',
-        checked_by:'',
-        technician:'',
+        refer_by:'',
     }),
     methods: {
         submit() {
@@ -15,6 +14,7 @@ export default {
                 if (value) {
                     axios.post('/ajax/diagnosis/create', {
                         name: this.name,
+                        test_name: this.test_name,
                         result: this.result,
                         opinion:this.opinion,
                         advice:this.advice,
@@ -34,8 +34,7 @@ export default {
             this.result=''
             this.opinion =''
             this.advice = ''
-            this.prepared =''
-            this.checked_by=''
+            this.test_name=''
             this.$validator.reset()
         },
     }
