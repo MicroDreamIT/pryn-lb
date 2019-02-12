@@ -3,14 +3,15 @@ export default {
         valid:true,
         patient:{},
         result:'',
-        opinion:'',
-        advice:'',
-        prepared:'',
+        type:'',
+        test:'',
+        isHidden:'',
         checked_by:'',
         technician:'',
         date: new Date().toISOString().substr(0, 10),
-      menu: false,
-      modal: false,
+        menu: false,
+        modal: false,
+        appendCount:1,
     }),
     methods: {
         submit() {
@@ -31,6 +32,9 @@ export default {
                     })
                 }
             })
+        },
+        addMore(){
+                this.appendCount++
         },
         clear() {
             this.name = ''
