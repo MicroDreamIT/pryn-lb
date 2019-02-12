@@ -21,9 +21,11 @@
         </v-list-tile-content>
     </v-list-tile>
 
-{#    patient#}
+
 
  <v-expansion-panel class="dashboard-dropdown">
+
+     {#  patient#}
 
          <v-expansion-panel-content>
             <div slot="header" v-if="!isHidden">
@@ -36,7 +38,7 @@
                                 <v-list-tile-title>
                                     <router-link :to="{name:'patientCreate'}">
                                          <i class="mdi mdi-comment-account-outline"></i>
-                                        Patient
+                                       Add patient
                                     </router-link>
                                 </v-list-tile-title>
                             </v-list-tile-content>
@@ -56,57 +58,140 @@
                 </v-card>
          </v-expansion-panel-content>
 
+
+       {# diagonosis#}
+
+     <v-expansion-panel-content>
+            <div slot="header" v-if="!isHidden">
+                <i class="mdi mdi-comment-account-outline"></i> Diagnosis
+            </div>
+                <v-card>
+                    <v-card-text>
+                       <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                     <router-link :to="{name:'diagnosisCreate'}">
+                                         <i class="mdi mdi-home-modern"></i>
+                                       Add Diagnosis
+                                    </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+
+                        <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                    <router-link  >
+                                        <i class="mdi mdi-settings"></i>
+                                        Manage Diagnosis
+                                    </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                    </v-card-text>
+                </v-card>
+         </v-expansion-panel-content>
+
+     {# Doctors#}
+
+     <v-expansion-panel-content>
+            <div slot="header" v-if="!isHidden">
+                <i class="mdi mdi-comment-account-outline"></i> Doctors
+            </div>
+                <v-card>
+                    <v-card-text>
+                       <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                       <router-link :to="{name:'doctorCreate'}">
+                                          <i class="mdi mdi-comment-account-outline"></i>
+                                          Add Doctors
+                                        </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+
+                        <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                    <router-link  >
+                                        <i class="mdi mdi-settings"></i>
+                                        Manage Doctors
+                                    </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                    </v-card-text>
+                </v-card>
+         </v-expansion-panel-content>
+
+     {# Test Items #}
+
+     <v-expansion-panel-content>
+            <div slot="header" v-if="!isHidden">
+                <i class="mdi mdi-comment-account-outline"></i> Test's
+            </div>
+                <v-card>
+                    <v-card-text>
+                       <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                        <router-link :to="{name:'testsCreate'}">
+                                             <i class="mdi mdi-airballoon"></i>
+                                          Add  Test Item
+                                        </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+
+                        <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                    <router-link  >
+                                        <i class="mdi mdi-settings"></i>
+                                        Manage Test's
+                                    </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                    </v-card-text>
+                </v-card>
+         </v-expansion-panel-content>
+
+     {# Company  #}
+
+     <v-expansion-panel-content>
+            <div slot="header" v-if="!isHidden">
+                <i class="mdi mdi-comment-account-outline"></i> Company
+            </div>
+                <v-card>
+                    <v-card-text>
+                       <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                          <router-link :to="{name:'companyCreate'}">
+                                                 <i class="mdi mdi-home-modern"></i>
+                                               Add  Company
+                                          </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+
+                        <v-list-tile @click="">
+                            <v-list-tile-content>
+                                <v-list-tile-title>
+                                    <router-link  >
+                                        <i class="mdi mdi-settings"></i>
+                                        Manage Company
+                                    </router-link>
+                                </v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                    </v-card-text>
+                </v-card>
+         </v-expansion-panel-content>
+
  </v-expansion-panel>
-
-
-
-
-
-
-    <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                <router-link :to="{name:'diagnosisCreate'}">
-                     <i class="mdi mdi-home-modern"></i>
-                    Diagnosis
-                </router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-    </v-list-tile>
-
-
-    <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                <router-link :to="{name:'doctorCreate'}">
-                  <i class="mdi mdi-comment-account-outline"></i>
-                    Doctors
-                </router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-    </v-list-tile>
-
-    <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                <router-link :to="{name:'testsCreate'}">
-                     <i class="mdi mdi-airballoon"></i>
-                    Test Item
-                </router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-    </v-list-tile>
-
-    <v-list-tile @click="">
-        <v-list-tile-content>
-            <v-list-tile-title>
-                <router-link :to="{name:'companyCreate'}">
-                     <i class="mdi mdi-home-modern"></i>
-                    Company
-                </router-link>
-            </v-list-tile-title>
-        </v-list-tile-content>
-    </v-list-tile>
 
 
 </v-list>

@@ -76,7 +76,13 @@ export default {
         date: new Date().toISOString().substr(0, 10),
         menu: false,
         modal: false,
-        appendCount:1,
+        reportData:[
+            {
+                type:'',
+                test:'',
+                result:''
+            }
+        ],
     }),
     methods: {
         submit() {
@@ -99,7 +105,10 @@ export default {
             })
         },
         addMore(){
-                this.appendCount++
+                this.reportData.push({ type:'', test:'',result:''})
+        },
+        removeMore(index){
+            this.reportData.splice(index,1)
         },
         clear() {
             this.name = ''
